@@ -1,0 +1,78 @@
+<header class="header">
+	<div class="container clearfix">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar icon-bar-1"></span> <span
+					class="icon-bar icon-bar-2"></span> <span
+					class="icon-bar icon-bar-3"></span>
+			</button>
+			<a class="logo" href="/index"> BLOG </a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<nav class="navbar-left primary-menu">
+				<ul id="menu-justnews-menu" class="nav navbar-nav">
+					<li class="menu-item"><a href="/index">首页</a></li>
+					<li class="dropdown menu-item">
+						<a>文章</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">jmeter</a></li>
+							<li><a href="#">EJB</a></li>
+							<li><a href="#">Jasper Report</a></li>
+							<li class="divider"></li>
+							<li><a href="#">分离的链接</a></li>
+							<li class="divider"></li>
+							<li><a href="#">另一个分离的链接</a></li>
+						</ul></li>
+					</li>
+					<li class="menu-item"><a href="/community">社区</a></li>
+					<li class="menu-item"><a href="/blog">博客</a> <!-- <ul role="menu" class=" dropdown-menu" style="display: none;">
+								<li class="menu-item"><a href="http://pan.baidu.com/s/1boHZF0j"> 获取本站安装包</a></li>
+								<li class="menu-item"><a href="http://git.oschina.net/duzhime/DUZHI_BLOG"> 获取本站源码包</a></li>
+							</ul> --></li>
+				</ul>
+			</nav>
+			<div class="navbar-action pull-right">
+				<form class="navbar-search" action="#" method="get" role="search">
+					<input type="text" name="search_word" class="navbar-search-input"
+						autocomplete="off" placeholder="输入关键词搜索..." value=""> <input
+						type="hidden" name="c" class="navbar-search-input"
+						placeholder="输入关键词搜索..." value="utf-8"> <a
+						class="navbar-search-icon j-navbar-search" href="javascript:;"
+						id="search"></a>
+				</form>
+				<#if session??>
+					<#if session.user_name??&&session.user_id??>
+						<div id="j-user-wrap">
+							<ul class="profile">
+								<li class="menu-item dropdown"><a href="#" data-toggle="dropdown" data-target="#">
+									<img src="upload/temp/headportrait/<#if session.user_image_url??>${session.user_image_url}<#else>default.jpg</#if>">${session.user_name}</a>                
+									<ul class="dropdown-menu" style="display: none;">	
+										<li><a href="#">个人中心</a></li>
+										<li><a href="#">密码修改</a></li>
+										<li><a href="#">帐号设置</a></li>                
+										<li><a href="/logOut">退出登录</a></li>
+									</ul>
+								</li>                
+							</ul>
+						</div>
+						<#else>
+						<nav class="navbar-right" style="margin-top: -16px;margin-left: -16px;">
+							<ul id="menu-justnews-menu" class="nav navbar-nav">
+								<li class="menu-item"><a id="userALogin" href="/login" class="login cur ">登录</a></li>
+								<li class="menu-item" style="margin-left: -28px;"><a class="login cur" href="/register">注册</a></li>
+							</ul>
+						</nav>
+					</#if>
+					<#else>
+					<nav class="navbar-right" style="margin-top: -16px;margin-left: -16px;">
+						<ul id="menu-justnews-menu" class="nav navbar-nav">
+							<li class="menu-item"><a id="userALogin" href="/login" class="login cur ">登录</a></li>
+							<li class="menu-item" style="margin-left: -28px;"><a class="login cur" href="/register">注册</a></li>
+						</ul>
+					</nav>
+				</#if>
+			</div>
+		</div>
+	</div>
+</header>

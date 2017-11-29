@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>markdown</title>
+	<#include "../common/commonCss.html">
+	<link rel="stylesheet" href="resources/Front/editor.md-master/css/editormd.css"/>
+	<style type="text/css">
+		.panel>.list-group .list-group-item.active {
+			color: #555;
+			font-weight: bold;
+			background-color: transparent;
+			border-color: #DDDDDD;
+		}
+		
+		.bar {
+			background-color: #51D49A;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 5px;
+		}
+	</style>
+</head>
+<body>
+	<!-- head -->
+	<#include "../common/commonHead.html">
+	
+	<div id="wrap">
+		<!-- 主体 -->
+		<div class="container main">
+
+			<div class="col-md-3">
+				<div class="panel-group" id="accordion" role="tablist"
+					aria-multiselectable="true">
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion"
+									href="#collapseOne" aria-expanded="true"
+									aria-controls="collapseOne">我的账号</a>
+							</h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse in"
+							role="tabpanel" aria-labelledby="headingOne">
+							<ul class="list-group">
+								<a class="list-group-item" href="/markdown">markdown</a>
+								<a class="list-group-item" href="#">Dapibus ac facilisis in</a>
+								<a class="list-group-item" href="#">Morbi leo risus</a>
+								<a class="list-group-item" href="#">Porta ac consectetur ac</a>
+								<a class="list-group-item" href="#">Vestibulum at eros</a>
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse"
+									data-parent="#accordion" href="#collapseTwo"
+									aria-expanded="false" aria-controls="collapseTwo">
+									Collapsible Group Item #2 </a>
+							</h4>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse"
+							role="tabpanel" aria-labelledby="headingTwo">
+							<ul class="list-group">
+								<a class="list-group-item" href="#">Cras justo odio</a>
+								<a class="list-group-item" href="#">Dapibus ac facilisis in</a>
+								<a class="list-group-item" href="#">Morbi leo risus</a>
+								<a class="list-group-item" href="#">Porta ac consectetur ac</a>
+								<a class="list-group-item" href="#">Vestibulum at eros</a>
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingThree">
+							<h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse"
+									data-parent="#accordion" href="#collapseThree"
+									aria-expanded="false" aria-controls="collapseThree">
+									Collapsible Group Item #3 </a>
+							</h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse"
+							role="tabpanel" aria-labelledby="headingThree">
+							<ul class="list-group">
+								<a class="list-group-item" href="#">Cras justo odio</a>
+								<a class="list-group-item" href="#">Dapibus ac facilisis in</a>
+								<a class="list-group-item" href="#">Morbi leo risus</a>
+								<a class="list-group-item" href="#">Porta ac consectetur ac</a>
+								<a class="list-group-item" href="#">Vestibulum at eros</a>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-9">
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="collapseListGroupHeading1">markdown
+						<button id="save" type="button" class="btn btn-primary" style="float: right;">保存</button></div>
+					<div>
+						<div class="panel-body">
+							<!--编辑器-->
+							<div id="test-editormd">
+							    <textarea style="display:none;" id="ts"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- 底部 --> 
+	<#include "../common/commonFoot.html"> 
+	<!-- <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&amp;id=12&amp;icon=1&amp;num=1"></iframe></div> -->
+	<#include "../common/commonJs.html">
+	<script src="resources/Front/editor.md-master/editormd.js"></script> 
+	<script src="resources/Front/editor.md-master/plugins/help-dialog/help-dialog.js"></script> 
+	<script type="text/javascript">
+		//    调用编辑器
+		var testEditor;
+		$(function() {
+		    testEditor = editormd("test-editormd", {
+		        width   : "100%",
+		        height  : 640,
+		        syncScrolling : "single",
+		        path    : "resources/Front/editor.md-master/lib/",
+		        //theme : "dark",
+                //previewTheme : "dark",
+                //editorTheme : "pastel-on-dark",
+                codeFold : true,
+                //syncScrolling : false,
+                saveHTMLToTextarea : true,    // 保存 HTML 到 Textarea
+                searchReplace : true,
+                //watch : false,                // 关闭实时预览
+                htmlDecode : "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启    
+                //toolbar  : false,             //关闭工具栏
+                //previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
+                emoji : true,
+                taskList : true,
+                tocm            : true,         // Using [TOCM]
+                tex : true,                   // 开启科学公式TeX语言支持，默认关闭
+                flowChart : true,             // 开启流程图支持，默认关闭
+                sequenceDiagram : true,       // 开启时序/序列图支持，默认关闭,
+                //dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为true
+                //dialogShowMask : false,     // 设置弹出层对话框显示透明遮罩层，全局通用，默认为true
+                //dialogDraggable : false,    // 设置弹出层对话框不可拖动，全局通用，默认为true
+                //dialogMaskOpacity : 0.4,    // 设置透明遮罩层的透明度，全局通用，默认值为0.1
+                //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
+                imageUpload : true,
+                imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL : "",
+                onload : function() {
+                    //console.log('onload', this);
+                    //this.fullscreen();
+                    //this.unwatch();
+                    //this.watch().fullscreen();
+
+                    //this.setMarkdown("#PHP");
+                    //this.width("100%");
+                    //this.height(480);
+                    //this.resize("100%", 640);
+                }
+		    });
+		});
+		//testEditor.getHTML();
+	</script>
+	<script type="text/javascript">
+		$("#save").bind('click', function() {
+            var html = testEditor.getHTML();
+            console.log(html);
+		})
+	</script>
+</body>
+</html>

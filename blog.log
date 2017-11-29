@@ -1,0 +1,9 @@
+
+2017-11-29 10:56:09
+[WARN]-[Thread: qtp405662939-20]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /resources
+
+2017-11-29 10:56:18
+[WARN]-[Thread: qtp405662939-22]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /upload
+
+2017-11-29 10:56:49
+[WARN]-[Thread: qtp405662939-19]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /resources/Front/css

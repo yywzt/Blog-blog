@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<#include "common/commonCss.html">
+	<link href="../../resources/Front/css/login.css" rel="stylesheet" >
+	<link href="//cdn.bootcss.com/nice-validator/1.0.10/jquery.validator.min.css" rel="stylesheet">
+</head>
+<body class="home blog columns-4">
+	<!-- head -->
+	<#include "common/commonHead.html">
+
+	<div id="wrap">
+		<!-- 主体 -->
+		<div class="container">
+		    <div class="row">
+		        <div class="col-md-offset-3 col-md-6" style="padding: 30px 0">
+		            <form class="form-horizontal" id="regForm">
+		                <span class="heading">用户注册</span>
+		                <div class="form-group">
+		                    <input type="text" max="3" class="form-control" name="username" id="username" placeholder="用户名或电子邮件" data-rule="required;">
+		                    <i class="fa fa-user"></i>
+		                </div>
+		                <div class="form-group help">
+		                    <input type="password" class="form-control" name="userpwd" id="userpwd" placeholder="密　码" data-rule="required;">
+		                    <i class="fa fa-lock"></i>
+		                    <a href="#" class="fa fa-question-circle"></a>
+		                </div>
+		                <div class="form-group help">
+		                    <input type="password" class="form-control" name="userpwd_rel" id="userpwd_rel" placeholder="确认密码" data-rule="required;">
+		                    <i class="fa fa-lock"></i>
+		                    <a href="#" class="fa fa-question-circle"></a>
+		                </div>
+		                <div class="row">
+							<div class="col-md-6">
+								<div class="form-group help">
+		                    		<input type="text" class="form-control" name="verificode" id="verificode" placeholder="输入验证码" data-rule="required;">
+		                    		<i class="fa fa-code"></i>
+		                		</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group help">
+		                    		<img src="/img" onclick="this.src='/img?t='+new Date().getTime();" id="code">
+		                		</div>
+							</div>
+		                </div>
+		                <div class="form-group">
+		                    <div class="main-checkbox">
+		                        <input type="checkbox" value="None" id="check" name="check"/>
+		                        <label for="check"></label>
+		                    </div>
+		                    <span class="text">接受协议</span>
+		                    <button type="button" class="btn btn-default" id="register">注册</button>
+		                </div>
+		            </form>
+		        </div>
+		    </div>
+		</div>
+		
+	</div>
+
+	<!-- foot -->
+	<#include "common/commonFoot.html">
+	
+	<!-- <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&amp;id=12&amp;icon=1&amp;num=1"></iframe></div> -->
+	<#include "common/commonJs.html">
+	<script src="http://cdn.bootcss.com/nice-validator/1.0.10/jquery.validator.min.js"></script>
+	<script src="http://cdn.bootcss.com/nice-validator/1.0.10/local/zh-CN.min.js"></script>
+	<script src="../../resources/Front/js/login.js"></script>
+</body>
+</html>

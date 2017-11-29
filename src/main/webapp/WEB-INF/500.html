@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>500</title>
+    <#include "Front/common/commonCss.html">
+    <style type="text/css">
+        body{margin:0;padding:0;background:#efefef;font-family:Georgia, Times, Verdana, Geneva, Arial, Helvetica, sans-serif;}
+        div#mother{margin:0px auto 0 auto;width:943px;height:572px;position:relative;}
+        div#errorBox{background: url(resources/Front/img/500.jpg) no-repeat top left;width:943px;height:572px;margin:auto;}
+        div#errorText{color:#39351e;padding:146px 0 0 446px }
+        div#errorText p{width:303px;font-size:14px;line-height:26px;}
+        div.link{height:41px;width:106px;}
+        div#home{margin:188px 0 0 315px;}
+        div#contact{margin:-41px 0 0 467px;}
+        h1{font-size:40px;margin-bottom:35px;}
+    </style>
+</head>
+<body class="home blog columns-4">
+
+<!-- head -->
+	<#include "Front/common/commonHead.html">
+
+	<div id="wrap">
+	    <!-- 主体 -->
+	    <div class="container main">
+	        <div id="mother">
+	            <div id="errorBox">
+	                <div id="errorText">
+	                </div>
+	                <a href="/index" title="返回首页">
+	                    <div class="link" id="home"></div>
+	                </a>
+	                <a href="javascript:history.back();" title="联系管理">
+	                    <div class="link" id="contact"></div>
+	                </a>
+	            </div>
+	        </div>
+	    </div>
+	
+	</div>
+
+	<!-- 底部 --> 
+	<#include "Front/common/commonFoot.html"> 
+	<!-- <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&amp;id=12&amp;icon=1&amp;num=1"></iframe></div> -->
+	<#include "Front/common/commonJs.html">
+</body>
+</html>
