@@ -46,7 +46,7 @@
 						<div id="j-user-wrap">
 							<ul class="profile">
 								<li class="menu-item dropdown"><a href="javascript:void(0);" data-toggle="dropdown" data-target="#">
-									<img src="upload/temp/headportrait/<#if session.user_image_url??>${session.user_image_url}<#else>default.jpg</#if>">${session.user_name}</a>                
+									<img src="<#if session.user_image_url??>${session.user_image_url}<#else>upload/temp/headportrait/default.jpg</#if>">${session.user_name}</a>                
 									<ul class="dropdown-menu" style="display: none;">	
 										<li><a href="#">个人中心</a></li>
 										<li><a href="#">密码修改</a></li>
