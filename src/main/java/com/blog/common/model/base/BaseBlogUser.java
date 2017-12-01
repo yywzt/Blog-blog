@@ -14,7 +14,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getUserId() {
-		return get("user_id");
+		return getInt("user_id");
 	}
 
 	public void setUserName(java.lang.String userName) {
@@ -22,7 +22,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserName() {
-		return get("user_name");
+		return getStr("user_name");
 	}
 
 	public void setUserPwd(java.lang.String userPwd) {
@@ -30,7 +30,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserPwd() {
-		return get("user_pwd");
+		return getStr("user_pwd");
 	}
 
 	public void setUserPhone(java.lang.Integer userPhone) {
@@ -38,7 +38,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getUserPhone() {
-		return get("user_phone");
+		return getInt("user_phone");
 	}
 
 	public void setUserSex(java.lang.String userSex) {
@@ -46,7 +46,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserSex() {
-		return get("user_sex");
+		return getStr("user_sex");
 	}
 
 	public void setUserQq(java.lang.Integer userQq) {
@@ -54,7 +54,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getUserQq() {
-		return get("user_qq");
+		return getInt("user_qq");
 	}
 
 	public void setUserEmail(java.lang.String userEmail) {
@@ -62,7 +62,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserEmail() {
-		return get("user_email");
+		return getStr("user_email");
 	}
 
 	public void setUserAddress(java.lang.String userAddress) {
@@ -70,7 +70,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserAddress() {
-		return get("user_address");
+		return getStr("user_address");
 	}
 
 	public void setUserMark(java.lang.Integer userMark) {
@@ -78,7 +78,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getUserMark() {
-		return get("user_mark");
+		return getInt("user_mark");
 	}
 
 	public void setUserRankId(java.lang.String userRankId) {
@@ -86,7 +86,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserRankId() {
-		return get("user_rank_id");
+		return getStr("user_rank_id");
 	}
 
 	public void setUserLastLoginDt(java.lang.String userLastLoginDt) {
@@ -94,7 +94,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserLastLoginDt() {
-		return get("user_last_login_dt");
+		return getStr("user_last_login_dt");
 	}
 
 	public void setUserBirthday(java.util.Date userBirthday) {
@@ -110,7 +110,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserDescription() {
-		return get("user_description");
+		return getStr("user_description");
 	}
 
 	public void setUserImageUrl(java.lang.String userImageUrl) {
@@ -118,7 +118,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserImageUrl() {
-		return get("user_image_url");
+		return getStr("user_image_url");
 	}
 
 	public void setUserSchool(java.lang.String userSchool) {
@@ -126,15 +126,15 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserSchool() {
-		return get("user_school");
+		return getStr("user_school");
 	}
 
-	public void setUserRegisterTime(java.util.Date userRegisterTime) {
+	public void setUserRegisterTime(java.lang.String userRegisterTime) {
 		set("user_register_time", userRegisterTime);
 	}
 
-	public java.util.Date getUserRegisterTime() {
-		return get("user_register_time");
+	public java.lang.String getUserRegisterTime() {
+		return getStr("user_register_time");
 	}
 
 	public void setUserWeibo(java.lang.String userWeibo) {
@@ -142,7 +142,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserWeibo() {
-		return get("user_weibo");
+		return getStr("user_weibo");
 	}
 
 	public void setUserBloodType(java.lang.String userBloodType) {
@@ -150,7 +150,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserBloodType() {
-		return get("user_blood_type");
+		return getStr("user_blood_type");
 	}
 
 	public void setUserSays(java.lang.String userSays) {
@@ -158,7 +158,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserSays() {
-		return get("user_says");
+		return getStr("user_says");
 	}
 
 	public void setUserEnabled(java.lang.Integer userEnabled) {
@@ -166,7 +166,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getUserEnabled() {
-		return get("user_enabled");
+		return getInt("user_enabled");
 	}
 
 	public void setUserPower(java.lang.String userPower) {
@@ -174,7 +174,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.String getUserPower() {
-		return get("user_power");
+		return getStr("user_power");
 	}
 
 	public void setDr(java.lang.Integer dr) {
@@ -182,7 +182,7 @@ public abstract class BaseBlogUser<M extends BaseBlogUser<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

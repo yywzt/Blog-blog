@@ -14,7 +14,7 @@ public abstract class BaseArticleSort<M extends BaseArticleSort<M>> extends Mode
 	}
 
 	public java.lang.Integer getTypeId() {
-		return get("type_id");
+		return getInt("type_id");
 	}
 
 	public void setTypeName(java.lang.String typeName) {
@@ -22,7 +22,7 @@ public abstract class BaseArticleSort<M extends BaseArticleSort<M>> extends Mode
 	}
 
 	public java.lang.String getTypeName() {
-		return get("type_name");
+		return getStr("type_name");
 	}
 
 	public void setTypeCode(java.lang.String typeCode) {
@@ -30,15 +30,15 @@ public abstract class BaseArticleSort<M extends BaseArticleSort<M>> extends Mode
 	}
 
 	public java.lang.String getTypeCode() {
-		return get("type_code");
+		return getStr("type_code");
 	}
 
-	public void setDr(java.lang.Integer dr) {
+	public void setDr(java.lang.Long dr) {
 		set("dr", dr);
 	}
 
-	public java.lang.Integer getDr() {
-		return get("dr");
+	public java.lang.Long getDr() {
+		return getLong("dr");
 	}
 
 }

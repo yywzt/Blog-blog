@@ -2,6 +2,7 @@ package com.blog.webSrc.controller;
 
 import com.blog.common.model.BlogUser;
 import com.blog.util.CodeGeneratorUtils;
+import com.blog.util.DateUtils;
 import com.blog.util.MyCaptchRenderController;
 import com.blog.util.StringUtils;
 import com.blog.webSrc.common.SessionConstants;
@@ -80,6 +81,8 @@ public class LoginController extends Controller {
 		setSessionAttr(SessionConstants.USER_ID, user.getInt("user_id"));
 		setSessionAttr(SessionConstants.USER_NAME, user.getStr("user_name"));
 		setSessionAttr(SessionConstants.USER_IMAGE_URL, user.getStr("user_image_url"));
+		user.setUserLastLoginDt(DateUtils.getCurDateTime());
+		user.update();
 		/*Role[] myRole = server.findUserRole(user);
 		//用户菜单列表
 		Module[][] modules = server.findUserModule(user);
@@ -125,6 +128,8 @@ public class LoginController extends Controller {
 			BlogUser user = new BlogUser();
 			user.setUserName(username.trim());
 			user.setUserPwd(CodeGeneratorUtils.generalPasw(userpwd));
+			user.setUserRegisterTime(DateUtils.getCurDateTime());
+			user.setUserEnabled(0);
 			setAttr("success", user.save());
 		} catch (Exception e) {
 			setAttr("errmsg", "注册失败");

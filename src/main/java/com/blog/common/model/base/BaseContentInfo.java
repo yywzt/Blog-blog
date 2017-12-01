@@ -14,7 +14,7 @@ public abstract class BaseContentInfo<M extends BaseContentInfo<M>> extends Mode
 	}
 
 	public java.lang.Integer getContentId() {
-		return get("content_id");
+		return getInt("content_id");
 	}
 
 	public void setUserId(java.lang.Integer userId) {
@@ -22,7 +22,7 @@ public abstract class BaseContentInfo<M extends BaseContentInfo<M>> extends Mode
 	}
 
 	public java.lang.Integer getUserId() {
-		return get("user_id");
+		return getInt("user_id");
 	}
 
 	public void setTypeId(java.lang.String typeId) {
@@ -30,7 +30,7 @@ public abstract class BaseContentInfo<M extends BaseContentInfo<M>> extends Mode
 	}
 
 	public java.lang.String getTypeId() {
-		return get("type_id");
+		return getStr("type_id");
 	}
 
 	public void setTitle(java.lang.String title) {
@@ -38,7 +38,7 @@ public abstract class BaseContentInfo<M extends BaseContentInfo<M>> extends Mode
 	}
 
 	public java.lang.String getTitle() {
-		return get("title");
+		return getStr("title");
 	}
 
 	public void setContent(java.lang.String content) {
@@ -46,15 +46,15 @@ public abstract class BaseContentInfo<M extends BaseContentInfo<M>> extends Mode
 	}
 
 	public java.lang.String getContent() {
-		return get("content");
+		return getStr("content");
 	}
 
-	public void setCreateDt(java.util.Date createDt) {
+	public void setCreateDt(java.lang.String createDt) {
 		set("create_dt", createDt);
 	}
 
-	public java.util.Date getCreateDt() {
-		return get("create_dt");
+	public java.lang.String getCreateDt() {
+		return getStr("create_dt");
 	}
 
 	public void setReadCount(java.lang.Integer readCount) {
@@ -62,7 +62,7 @@ public abstract class BaseContentInfo<M extends BaseContentInfo<M>> extends Mode
 	}
 
 	public java.lang.Integer getReadCount() {
-		return get("read_count");
+		return getInt("read_count");
 	}
 
 	public void setLaudCount(java.lang.Integer laudCount) {
@@ -70,7 +70,7 @@ public abstract class BaseContentInfo<M extends BaseContentInfo<M>> extends Mode
 	}
 
 	public java.lang.Integer getLaudCount() {
-		return get("laud_count");
+		return getInt("laud_count");
 	}
 
 	public void setCommentCount(java.lang.Integer commentCount) {
@@ -78,7 +78,7 @@ public abstract class BaseContentInfo<M extends BaseContentInfo<M>> extends Mode
 	}
 
 	public java.lang.Integer getCommentCount() {
-		return get("comment_count");
+		return getInt("comment_count");
 	}
 
 	public void setDr(java.lang.Integer dr) {
@@ -86,7 +86,7 @@ public abstract class BaseContentInfo<M extends BaseContentInfo<M>> extends Mode
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

@@ -14,7 +14,7 @@ public abstract class BaseUserAttention<M extends BaseUserAttention<M>> extends 
 	}
 
 	public java.lang.Integer getId() {
-		return get("id");
+		return getInt("id");
 	}
 
 	public void setUserId(java.lang.Integer userId) {
@@ -22,7 +22,7 @@ public abstract class BaseUserAttention<M extends BaseUserAttention<M>> extends 
 	}
 
 	public java.lang.Integer getUserId() {
-		return get("user_id");
+		return getInt("user_id");
 	}
 
 	public void setAttentionId(java.lang.Integer attentionId) {
@@ -30,7 +30,7 @@ public abstract class BaseUserAttention<M extends BaseUserAttention<M>> extends 
 	}
 
 	public java.lang.Integer getAttentionId() {
-		return get("attention_id");
+		return getInt("attention_id");
 	}
 
 	public void setAttentionDt(java.util.Date attentionDt) {
@@ -46,7 +46,7 @@ public abstract class BaseUserAttention<M extends BaseUserAttention<M>> extends 
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

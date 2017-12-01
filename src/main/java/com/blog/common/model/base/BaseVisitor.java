@@ -14,7 +14,7 @@ public abstract class BaseVisitor<M extends BaseVisitor<M>> extends Model<M> imp
 	}
 
 	public java.lang.Integer getId() {
-		return get("id");
+		return getInt("id");
 	}
 
 	public void setVisitorId(java.lang.Integer visitorId) {
@@ -22,7 +22,7 @@ public abstract class BaseVisitor<M extends BaseVisitor<M>> extends Model<M> imp
 	}
 
 	public java.lang.Integer getVisitorId() {
-		return get("visitor_id");
+		return getInt("visitor_id");
 	}
 
 	public void setUserId(java.lang.Integer userId) {
@@ -30,7 +30,7 @@ public abstract class BaseVisitor<M extends BaseVisitor<M>> extends Model<M> imp
 	}
 
 	public java.lang.Integer getUserId() {
-		return get("user_id");
+		return getInt("user_id");
 	}
 
 	public void setVisitorTime(java.util.Date visitorTime) {
@@ -46,7 +46,7 @@ public abstract class BaseVisitor<M extends BaseVisitor<M>> extends Model<M> imp
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

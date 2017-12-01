@@ -14,7 +14,7 @@ public abstract class BaseUserRank<M extends BaseUserRank<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getRankId() {
-		return get("rank_id");
+		return getInt("rank_id");
 	}
 
 	public void setUserId(java.lang.Integer userId) {
@@ -22,7 +22,7 @@ public abstract class BaseUserRank<M extends BaseUserRank<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getUserId() {
-		return get("user_id");
+		return getInt("user_id");
 	}
 
 	public void setUserRankId(java.lang.Integer userRankId) {
@@ -30,7 +30,7 @@ public abstract class BaseUserRank<M extends BaseUserRank<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getUserRankId() {
-		return get("user_rank_id");
+		return getInt("user_rank_id");
 	}
 
 	public void setRankMark(java.lang.Integer rankMark) {
@@ -38,7 +38,7 @@ public abstract class BaseUserRank<M extends BaseUserRank<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getRankMark() {
-		return get("rank_mark");
+		return getInt("rank_mark");
 	}
 
 	public void setRankName(java.lang.String rankName) {
@@ -46,7 +46,7 @@ public abstract class BaseUserRank<M extends BaseUserRank<M>> extends Model<M> i
 	}
 
 	public java.lang.String getRankName() {
-		return get("rank_name");
+		return getStr("rank_name");
 	}
 
 	public void setDr(java.lang.Integer dr) {
@@ -54,7 +54,7 @@ public abstract class BaseUserRank<M extends BaseUserRank<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

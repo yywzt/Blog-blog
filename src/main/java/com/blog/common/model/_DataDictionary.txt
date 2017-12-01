@@ -1,16 +1,16 @@
 Table: article_sort
------------+-------------+------+-----+---------+---------
- Field     | Type        | Null | Key | Default | Remarks 
------------+-------------+------+-----+---------+---------
- type_id   | INT(10)     | NO   | PRI |         |         
- type_name | VARCHAR(90) | YES  |     |         | blog:博客
+-----------+------------------+------+-----+---------+---------
+ Field     | Type             | Null | Key | Default | Remarks 
+-----------+------------------+------+-----+---------+---------
+ type_id   | INT(10)          | NO   | PRI |         |         
+ type_name | VARCHAR(90)      | YES  |     |         | blog:博客
             article:文章
             community:社区(问题)
- type_code | VARCHAR(30) | YES  |     |         | blog:博客
+ type_code | VARCHAR(30)      | YES  |     |         | blog:博客
             article:文章
             community:社区(问题)
- dr        | INT(10)     | YES  |     |         |         
------------+-------------+------+-----+---------+---------
+ dr        | INT UNSIGNED(10) | YES  |     |         |         
+-----------+------------------+------+-----+---------+---------
 
 Table: blog_friend
 -----------+--------------+------+-----+---------+---------
@@ -43,7 +43,7 @@ Table: blog_user
 --------------------+----------------------+------+-----+---------+---------
  user_id            | INT(10)              | NO   | PRI |         |         
  user_name          | VARCHAR(32)          | NO   |     |         | 用户名     
- user_pwd           | VARCHAR(32)          | NO   |     |         | 用户密码    
+ user_pwd           | VARCHAR(255)         | NO   |     |         | 用户密码    
  user_phone         | INT(10)              | YES  |     |         | 手机号码    
  user_sex           | VARCHAR(6)           | YES  |     |         | 性别      
  user_qq            | INT(10)              | YES  |     |         | qq      
@@ -51,19 +51,19 @@ Table: blog_user
  user_address       | VARCHAR(255)         | YES  |     |         | 地址      
  user_mark          | INT(10)              | YES  |     |         | 用户积分    
  user_rank_id       | VARCHAR(10)          | YES  |     |         | 等级id    
- user_last_login_dt | VARCHAR(15)          | YES  |     |         | 最后登录时间  
+ user_last_login_dt | VARCHAR(60)          | YES  |     |         | 最后登录时间  
  user_birthday      | DATETIME(19)         | YES  |     |         | 生日      
  user_description   | VARCHAR(255)         | YES  |     |         | 自我描述    
  user_image_url     | VARCHAR(255)         | YES  |     |         | 用户头像存储路径
  user_school        | VARCHAR(255)         | YES  |     |         | 毕业学校    
- user_register_time | DATETIME(19)         | YES  |     |         | 用户注册时间  
+ user_register_time | VARCHAR(60)          | YES  |     |         | 用户注册时间  
  user_weibo         | VARCHAR(255)         | YES  |     |         | 用户微博    
  user_blood_type    | VARCHAR(3)           | YES  |     |         | 用户血型    
  user_says          | VARCHAR(255)         | YES  |     |         | 用户语录    
  user_enabled       | INT(10)              | YES  |     |         | 0为启用
             1为不启用
  user_power         | VARCHAR(255)         | YES  |     |         | 拥有的权限   
- dr                 | SMALLINT UNSIGNED(5) | NO   |     |         | 删除标志    
+ dr                 | SMALLINT UNSIGNED(5) | NO   |     | 0       | 删除标志    
 --------------------+----------------------+------+-----+---------+---------
 
 Table: content_info
@@ -76,7 +76,7 @@ Table: content_info
             
  title         | VARCHAR(128) | YES  |     |         | 标题      
  content       | TEXT(65535)  | YES  |     |         | 内容      
- create_dt     | DATETIME(19) | YES  |     |         | 创建时间    
+ create_dt     | VARCHAR(60)  | YES  |     |         | 创建时间    
  read_count    | INT(10)      | YES  |     |         | 阅读量     
  laud_count    | INT(10)      | YES  |     |         | 赞-个数    
  comment_count | INT(10)      | YES  |     |         | 评论数量    
@@ -131,6 +131,83 @@ Table: stay_message
  stay_user_dt    | DATETIME(19) | YES  |     |         | 留言时间    
  dr              | INT(10)      | NO   |     |         |         
 -----------------+--------------+------+-----+---------+---------
+
+Table: sys_log
+-------------+--------------+------+-----+---------+---------
+ Field       | Type         | Null | Key | Default | Remarks 
+-------------+--------------+------+-----+---------+---------
+ id          | INT(10)      | NO   | PRI |         |         
+ uid         | INT(10)      | YES  |     |         | 系统用户ID  
+ from        | VARCHAR(255) | YES  |     |         | 来源 url  
+ ip          | VARCHAR(22)  | YES  |     |         | 客户端IP   
+ url         | VARCHAR(255) | YES  |     |         |         
+ date        | DATETIME(19) | YES  |     |         | 记录时间    
+ err_msg     | TEXT(65535)  | YES  |     |         | 异常信息    
+ err_code    | INT(10)      | YES  |     | 0       | 状态码，0：正常
+ class_name  | VARCHAR(200) | YES  |     |         | controller类名
+ method_name | VARCHAR(64)  | YES  |     |         | 方法名     
+ start_time  | DATETIME(19) | YES  |     |         | 操作时间    
+ spend_time  | BIGINT(19)   | YES  |     |         | 耗时，毫秒   
+ params      | TEXT(65535)  | YES  |     |         | 提供的参数   
+-------------+--------------+------+-----+---------+---------
+
+Table: sys_login_record
+-----------------+--------------+------+-----+---------+---------
+ Field           | Type         | Null | Key | Default | Remarks 
+-----------------+--------------+------+-----+---------+---------
+ id              | INT(10)      | NO   | PRI |         |         
+ sys_uid         | INT(10)      | NO   |     |         |         
+ login_date      | DATETIME(19) | NO   |     |         | 登陆时间    
+ login_err_times | INT(10)      | NO   |     |         | 1天内连续出错次数
+ login_status    | TINYINT(3)   | NO   |     |         | 1-成功  0-失败
+-----------------+--------------+------+-----+---------+---------
+
+Table: sys_res
+------------+---------------+------+-----+--------------+---------
+ Field      | Type          | Null | Key | Default      | Remarks 
+------------+---------------+------+-----+--------------+---------
+ id         | INT(10)       | NO   | PRI |              |         
+ pid        | INT(10)       | YES  |     |              |         
+ name       | VARCHAR(111)  | YES  |     |              |         
+ des        | VARCHAR(255)  | YES  |     |              |         
+ url        | VARCHAR(255)  | YES  |     |              |         
+ iconCls    | VARCHAR(255)  | YES  |     | am-icon-file |         
+ seq        | INT(10)       | YES  |     | 1            |         
+ type       | INT(10)       | YES  |     | 2            | 1 功能 2 权限
+ modifydate | TIMESTAMP(19) | YES  |     |              |         
+ enabled    | INT(10)       | YES  |     | 1            | 是否启用 1：启用  0：禁用
+ level      | INT(10)       | YES  |     | 0            |         
+------------+---------------+------+-----+--------------+---------
+
+Table: sys_role
+------------+--------------+------+-----+---------+---------
+ Field      | Type         | Null | Key | Default | Remarks 
+------------+--------------+------+-----+---------+---------
+ id         | INT(10)      | NO   | PRI |         |         
+ name       | VARCHAR(55)  | NO   |     |         |         
+ des        | VARCHAR(55)  | YES  |     |         |         
+ seq        | INT(10)      | YES  |     | 1       |         
+ createdate | DATETIME(19) | YES  |     |         |         
+ status     | INT(10)      | YES  |     | 1       | 0-禁用  1-启用
+------------+--------------+------+-----+---------+---------
+
+Table: sys_role_res
+---------+---------+------+-----+---------+---------
+ Field   | Type    | Null | Key | Default | Remarks 
+---------+---------+------+-----+---------+---------
+ id      | INT(10) | NO   | PRI |         |         
+ res_id  | INT(10) | YES  |     |         |         
+ role_id | INT(10) | YES  |     |         |         
+---------+---------+------+-----+---------+---------
+
+Table: sys_user_role
+---------+---------+------+-----+---------+---------
+ Field   | Type    | Null | Key | Default | Remarks 
+---------+---------+------+-----+---------+---------
+ id      | INT(10) | NO   | PRI |         |         
+ user_id | INT(10) | YES  |     |         |         
+ role_id | INT(10) | YES  |     |         |         
+---------+---------+------+-----+---------+---------
 
 Table: system_message
 ----------------+--------------+------+-----+---------+---------

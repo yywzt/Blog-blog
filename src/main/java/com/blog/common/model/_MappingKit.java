@@ -25,6 +25,12 @@ public class _MappingKit {
 		arp.addMapping("power_list", "id", PowerList.class);
 		arp.addMapping("secret_message", "id", SecretMessage.class);
 		arp.addMapping("stay_message", "id", StayMessage.class);
+		arp.addMapping("sys_log", "id", SysLog.class);
+		arp.addMapping("sys_login_record", "id", SysLoginRecord.class);
+		arp.addMapping("sys_res", "id", SysRes.class);
+		arp.addMapping("sys_role", "id", SysRole.class);
+		arp.addMapping("sys_role_res", "id", SysRoleRes.class);
+		arp.addMapping("sys_user_role", "id", SysUserRole.class);
 		arp.addMapping("system_message", "id", SystemMessage.class);
 		arp.addMapping("user_attention", "id", UserAttention.class);
 		arp.addMapping("user_comment", "id", UserComment.class);

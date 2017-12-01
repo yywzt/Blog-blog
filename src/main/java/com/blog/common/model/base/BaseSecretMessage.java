@@ -14,7 +14,7 @@ public abstract class BaseSecretMessage<M extends BaseSecretMessage<M>> extends 
 	}
 
 	public java.lang.Integer getId() {
-		return get("id");
+		return getInt("id");
 	}
 
 	public void setSendId(java.lang.Integer sendId) {
@@ -22,7 +22,7 @@ public abstract class BaseSecretMessage<M extends BaseSecretMessage<M>> extends 
 	}
 
 	public java.lang.Integer getSendId() {
-		return get("send_id");
+		return getInt("send_id");
 	}
 
 	public void setReceiveId(java.lang.Integer receiveId) {
@@ -30,7 +30,7 @@ public abstract class BaseSecretMessage<M extends BaseSecretMessage<M>> extends 
 	}
 
 	public java.lang.Integer getReceiveId() {
-		return get("receive_id");
+		return getInt("receive_id");
 	}
 
 	public void setMessageTopic(java.lang.String messageTopic) {
@@ -38,7 +38,7 @@ public abstract class BaseSecretMessage<M extends BaseSecretMessage<M>> extends 
 	}
 
 	public java.lang.String getMessageTopic() {
-		return get("message_topic");
+		return getStr("message_topic");
 	}
 
 	public void setMessageContent(java.lang.String messageContent) {
@@ -46,7 +46,7 @@ public abstract class BaseSecretMessage<M extends BaseSecretMessage<M>> extends 
 	}
 
 	public java.lang.String getMessageContent() {
-		return get("message_content");
+		return getStr("message_content");
 	}
 
 	public void setSendTime(java.util.Date sendTime) {
@@ -62,7 +62,7 @@ public abstract class BaseSecretMessage<M extends BaseSecretMessage<M>> extends 
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

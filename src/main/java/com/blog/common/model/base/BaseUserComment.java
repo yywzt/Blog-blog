@@ -14,7 +14,7 @@ public abstract class BaseUserComment<M extends BaseUserComment<M>> extends Mode
 	}
 
 	public java.lang.Integer getId() {
-		return get("id");
+		return getInt("id");
 	}
 
 	public void setContentId(java.lang.Integer contentId) {
@@ -22,7 +22,7 @@ public abstract class BaseUserComment<M extends BaseUserComment<M>> extends Mode
 	}
 
 	public java.lang.Integer getContentId() {
-		return get("content_id");
+		return getInt("content_id");
 	}
 
 	public void setCommitUserId(java.lang.Integer commitUserId) {
@@ -30,7 +30,7 @@ public abstract class BaseUserComment<M extends BaseUserComment<M>> extends Mode
 	}
 
 	public java.lang.Integer getCommitUserId() {
-		return get("commit_user_id");
+		return getInt("commit_user_id");
 	}
 
 	public void setCommitContent(java.lang.String commitContent) {
@@ -38,7 +38,7 @@ public abstract class BaseUserComment<M extends BaseUserComment<M>> extends Mode
 	}
 
 	public java.lang.String getCommitContent() {
-		return get("commit_content");
+		return getStr("commit_content");
 	}
 
 	public void setCommitDt(java.util.Date commitDt) {
@@ -54,7 +54,7 @@ public abstract class BaseUserComment<M extends BaseUserComment<M>> extends Mode
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

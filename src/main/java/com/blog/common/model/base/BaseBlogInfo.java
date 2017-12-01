@@ -14,7 +14,7 @@ public abstract class BaseBlogInfo<M extends BaseBlogInfo<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getId() {
-		return get("id");
+		return getInt("id");
 	}
 
 	public void setUserId(java.lang.Integer userId) {
@@ -22,7 +22,7 @@ public abstract class BaseBlogInfo<M extends BaseBlogInfo<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getUserId() {
-		return get("user_id");
+		return getInt("user_id");
 	}
 
 	public void setBlogTitle(java.lang.String blogTitle) {
@@ -30,7 +30,7 @@ public abstract class BaseBlogInfo<M extends BaseBlogInfo<M>> extends Model<M> i
 	}
 
 	public java.lang.String getBlogTitle() {
-		return get("blog_title");
+		return getStr("blog_title");
 	}
 
 	public void setBlogName(java.lang.String blogName) {
@@ -38,7 +38,7 @@ public abstract class BaseBlogInfo<M extends BaseBlogInfo<M>> extends Model<M> i
 	}
 
 	public java.lang.String getBlogName() {
-		return get("blog_name");
+		return getStr("blog_name");
 	}
 
 	public void setBlogDescription(java.lang.String blogDescription) {
@@ -46,7 +46,7 @@ public abstract class BaseBlogInfo<M extends BaseBlogInfo<M>> extends Model<M> i
 	}
 
 	public java.lang.String getBlogDescription() {
-		return get("blog_description");
+		return getStr("blog_description");
 	}
 
 	public void setEnabled(java.lang.Integer enabled) {
@@ -54,7 +54,7 @@ public abstract class BaseBlogInfo<M extends BaseBlogInfo<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getEnabled() {
-		return get("enabled");
+		return getInt("enabled");
 	}
 
 	public void setDr(java.lang.Integer dr) {
@@ -62,7 +62,7 @@ public abstract class BaseBlogInfo<M extends BaseBlogInfo<M>> extends Model<M> i
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

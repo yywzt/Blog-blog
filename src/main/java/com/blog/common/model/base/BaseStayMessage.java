@@ -14,7 +14,7 @@ public abstract class BaseStayMessage<M extends BaseStayMessage<M>> extends Mode
 	}
 
 	public java.lang.Integer getId() {
-		return get("id");
+		return getInt("id");
 	}
 
 	public void setUserId(java.lang.Integer userId) {
@@ -22,7 +22,7 @@ public abstract class BaseStayMessage<M extends BaseStayMessage<M>> extends Mode
 	}
 
 	public java.lang.Integer getUserId() {
-		return get("user_id");
+		return getInt("user_id");
 	}
 
 	public void setStayUserId(java.lang.Integer stayUserId) {
@@ -30,7 +30,7 @@ public abstract class BaseStayMessage<M extends BaseStayMessage<M>> extends Mode
 	}
 
 	public java.lang.Integer getStayUserId() {
-		return get("stay_user_id");
+		return getInt("stay_user_id");
 	}
 
 	public void setMessageContent(java.lang.String messageContent) {
@@ -38,7 +38,7 @@ public abstract class BaseStayMessage<M extends BaseStayMessage<M>> extends Mode
 	}
 
 	public java.lang.String getMessageContent() {
-		return get("message_content");
+		return getStr("message_content");
 	}
 
 	public void setStayUserDt(java.util.Date stayUserDt) {
@@ -54,7 +54,7 @@ public abstract class BaseStayMessage<M extends BaseStayMessage<M>> extends Mode
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

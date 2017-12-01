@@ -14,7 +14,7 @@ public abstract class BaseFriendlyLink<M extends BaseFriendlyLink<M>> extends Mo
 	}
 
 	public java.lang.Integer getId() {
-		return get("id");
+		return getInt("id");
 	}
 
 	public void setLinkId(java.lang.String linkId) {
@@ -22,7 +22,7 @@ public abstract class BaseFriendlyLink<M extends BaseFriendlyLink<M>> extends Mo
 	}
 
 	public java.lang.String getLinkId() {
-		return get("link_id");
+		return getStr("link_id");
 	}
 
 	public void setLinkName(java.lang.String linkName) {
@@ -30,7 +30,7 @@ public abstract class BaseFriendlyLink<M extends BaseFriendlyLink<M>> extends Mo
 	}
 
 	public java.lang.String getLinkName() {
-		return get("link_name");
+		return getStr("link_name");
 	}
 
 	public void setLinkUrl(java.lang.String linkUrl) {
@@ -38,7 +38,7 @@ public abstract class BaseFriendlyLink<M extends BaseFriendlyLink<M>> extends Mo
 	}
 
 	public java.lang.String getLinkUrl() {
-		return get("link_url");
+		return getStr("link_url");
 	}
 
 	public void setLinkLogo(java.lang.String linkLogo) {
@@ -46,7 +46,7 @@ public abstract class BaseFriendlyLink<M extends BaseFriendlyLink<M>> extends Mo
 	}
 
 	public java.lang.String getLinkLogo() {
-		return get("link_logo");
+		return getStr("link_logo");
 	}
 
 	public void setShowOrder(java.lang.Integer showOrder) {
@@ -54,7 +54,7 @@ public abstract class BaseFriendlyLink<M extends BaseFriendlyLink<M>> extends Mo
 	}
 
 	public java.lang.Integer getShowOrder() {
-		return get("show_order");
+		return getInt("show_order");
 	}
 
 	public void setDr(java.lang.Integer dr) {
@@ -62,7 +62,7 @@ public abstract class BaseFriendlyLink<M extends BaseFriendlyLink<M>> extends Mo
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

@@ -14,7 +14,7 @@ public abstract class BaseSystemMessage<M extends BaseSystemMessage<M>> extends 
 	}
 
 	public java.lang.Integer getId() {
-		return get("id");
+		return getInt("id");
 	}
 
 	public void setReceiveId(java.lang.Integer receiveId) {
@@ -22,7 +22,7 @@ public abstract class BaseSystemMessage<M extends BaseSystemMessage<M>> extends 
 	}
 
 	public java.lang.Integer getReceiveId() {
-		return get("receive_id");
+		return getInt("receive_id");
 	}
 
 	public void setSendDefault(java.lang.Integer sendDefault) {
@@ -30,7 +30,7 @@ public abstract class BaseSystemMessage<M extends BaseSystemMessage<M>> extends 
 	}
 
 	public java.lang.Integer getSendDefault() {
-		return get("send_default");
+		return getInt("send_default");
 	}
 
 	public void setSystemTopics(java.lang.String systemTopics) {
@@ -38,7 +38,7 @@ public abstract class BaseSystemMessage<M extends BaseSystemMessage<M>> extends 
 	}
 
 	public java.lang.String getSystemTopics() {
-		return get("system_topics");
+		return getStr("system_topics");
 	}
 
 	public void setSystemContent(java.lang.String systemContent) {
@@ -46,7 +46,7 @@ public abstract class BaseSystemMessage<M extends BaseSystemMessage<M>> extends 
 	}
 
 	public java.lang.String getSystemContent() {
-		return get("system_content");
+		return getStr("system_content");
 	}
 
 	public void setCreateDt(java.util.Date createDt) {
@@ -62,7 +62,7 @@ public abstract class BaseSystemMessage<M extends BaseSystemMessage<M>> extends 
 	}
 
 	public java.lang.String getType() {
-		return get("type");
+		return getStr("type");
 	}
 
 	public void setDr(java.lang.Integer dr) {
@@ -70,7 +70,7 @@ public abstract class BaseSystemMessage<M extends BaseSystemMessage<M>> extends 
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

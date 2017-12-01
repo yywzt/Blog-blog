@@ -1,5 +1,7 @@
 package com.blog.common.config;
 
+import com.alibaba.druid.filter.stat.StatFilter;
+import com.alibaba.druid.wall.WallFilter;
 import com.blog.common.model._MappingKit;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
@@ -12,6 +14,7 @@ import com.jfinal.ext.interceptor.SessionInViewInterceptor;
 import com.jfinal.kit.PropKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.activerecord.dialect.MysqlDialect;
+import com.jfinal.plugin.c3p0.C3p0Plugin;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
@@ -41,7 +44,17 @@ public class MainConfig extends JFinalConfig {
 		//设置默认视图类型
 		me.setViewType(ViewType.FREE_MARKER);
 		//设置404渲染视图
-		me.setError404View("WEB-INF/404.html");
+		me.setError404View("/WEB-INF/404.html");
+		me.setError500View("/WEB-INF/500.html");
+		//每页显示数
+		int pageSize = 10;
+		try{
+			pageSize = PropKit.getInt("pageSize");
+		}catch(Exception e){
+			e.printStackTrace();
+			pageSize = 10;
+		}
+		GlobalConstants.setPageSize(pageSize);
 	}
 	/**
 	 * 配置JFinal路由映射
@@ -51,6 +64,21 @@ public class MainConfig extends JFinalConfig {
 		me.add(new FrontRoutes());
 		me.add(new AdminRoutes());
 	}
+	
+	public static C3p0Plugin createC3p0Plugin() {
+		return new C3p0Plugin(PropKit.get("jdbcUrl"), PropKit.get("user"),
+				PropKit.get("password"));
+	}
+
+	public static DruidPlugin createDruidPlugin() {
+		DruidPlugin dp = new DruidPlugin(PropKit.get("jdbcUrl"),PropKit.get("user"), PropKit.get("password"));
+		dp.addFilter(new StatFilter());
+		WallFilter wall = new WallFilter();
+		wall.setDbType("mysql");
+		dp.addFilter(wall);
+		return dp;
+	}
+	
 	/**
 	 * 配置JFinal插件
 	 * 数据库连接池
@@ -61,7 +89,7 @@ public class MainConfig extends JFinalConfig {
 	@Override
 	public void configPlugin(Plugins me) {
 		//配置数据库连接池插件
-		DruidPlugin dbPlugin=new DruidPlugin(PropKit.get("jdbcUrl"), PropKit.get("user"), PropKit.get("password"));
+		DruidPlugin dbPlugin=createDruidPlugin();
 		//orm映射 配置ActiveRecord插件
 		ActiveRecordPlugin arp=new ActiveRecordPlugin(dbPlugin);
 		arp.setShowSql(PropKit.getBoolean("devMode"));

@@ -14,7 +14,7 @@ public abstract class BaseBlogFriend<M extends BaseBlogFriend<M>> extends Model<
 	}
 
 	public java.lang.Integer getId() {
-		return get("id");
+		return getInt("id");
 	}
 
 	public void setUserId(java.lang.Integer userId) {
@@ -22,7 +22,7 @@ public abstract class BaseBlogFriend<M extends BaseBlogFriend<M>> extends Model<
 	}
 
 	public java.lang.Integer getUserId() {
-		return get("user_id");
+		return getInt("user_id");
 	}
 
 	public void setFriendId(java.lang.Integer friendId) {
@@ -30,7 +30,7 @@ public abstract class BaseBlogFriend<M extends BaseBlogFriend<M>> extends Model<
 	}
 
 	public java.lang.Integer getFriendId() {
-		return get("friend_id");
+		return getInt("friend_id");
 	}
 
 	public void setAddDt(java.util.Date addDt) {
@@ -46,7 +46,7 @@ public abstract class BaseBlogFriend<M extends BaseBlogFriend<M>> extends Model<
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

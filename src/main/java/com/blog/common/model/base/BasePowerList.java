@@ -14,7 +14,7 @@ public abstract class BasePowerList<M extends BasePowerList<M>> extends Model<M>
 	}
 
 	public java.lang.Integer getId() {
-		return get("id");
+		return getInt("id");
 	}
 
 	public void setBl_userId(java.lang.Integer bl_userId) {
@@ -22,7 +22,7 @@ public abstract class BasePowerList<M extends BasePowerList<M>> extends Model<M>
 	}
 
 	public java.lang.Integer getBl_userId() {
-		return get("bl__user_id");
+		return getInt("bl__user_id");
 	}
 
 	public void setPowerId(java.lang.String powerId) {
@@ -30,7 +30,7 @@ public abstract class BasePowerList<M extends BasePowerList<M>> extends Model<M>
 	}
 
 	public java.lang.String getPowerId() {
-		return get("power_id");
+		return getStr("power_id");
 	}
 
 	public void setPowerName(java.lang.String powerName) {
@@ -38,7 +38,7 @@ public abstract class BasePowerList<M extends BasePowerList<M>> extends Model<M>
 	}
 
 	public java.lang.String getPowerName() {
-		return get("power_name");
+		return getStr("power_name");
 	}
 
 	public void setDr(java.lang.Integer dr) {
@@ -46,7 +46,7 @@ public abstract class BasePowerList<M extends BasePowerList<M>> extends Model<M>
 	}
 
 	public java.lang.Integer getDr() {
-		return get("dr");
+		return getInt("dr");
 	}
 
 }

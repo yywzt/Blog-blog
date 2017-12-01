@@ -21,7 +21,7 @@ public class FrontRoutes extends Routes {
 		//博客
 		add("/blog", BlogController.class);
 		//编辑器
-		add("/markdown", MarkdownController.class);
+		add("/blog/markdown", MarkdownController.class);
 	}
 
 }
