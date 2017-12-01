@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>markdown</title>
-	<#include "../common/commonCss.html">
+	<#include "../../common/commonCss.html">
 	<link rel="stylesheet" href="resources/Front/editor.md-master/css/editormd.css"/>
 	<style type="text/css">
 		.panel>.list-group .list-group-item.active {
@@ -24,77 +24,14 @@
 </head>
 <body>
 	<!-- head -->
-	<#include "../common/commonHead.html">
+	<#include "../../common/commonHead.html">
 	
 	<div id="wrap">
 		<!-- 主体 -->
 		<div class="container main">
 
-			<div class="col-md-3">
-				<div class="panel-group" id="accordion" role="tablist"
-					aria-multiselectable="true">
-					<div class="panel panel-default">
-						<div class="panel-heading" role="tab" id="headingOne">
-							<h4 class="panel-title">
-								<a role="button" data-toggle="collapse" data-parent="#accordion"
-									href="#collapseOne" aria-expanded="true"
-									aria-controls="collapseOne">我的账号</a>
-							</h4>
-						</div>
-						<div id="collapseOne" class="panel-collapse collapse in"
-							role="tabpanel" aria-labelledby="headingOne">
-							<ul class="list-group">
-								<a class="list-group-item" href="/markdown">markdown</a>
-								<a class="list-group-item" href="#">Dapibus ac facilisis in</a>
-								<a class="list-group-item" href="#">Morbi leo risus</a>
-								<a class="list-group-item" href="#">Porta ac consectetur ac</a>
-								<a class="list-group-item" href="#">Vestibulum at eros</a>
-							</ul>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading" role="tab" id="headingTwo">
-							<h4 class="panel-title">
-								<a class="collapsed" role="button" data-toggle="collapse"
-									data-parent="#accordion" href="#collapseTwo"
-									aria-expanded="false" aria-controls="collapseTwo">
-									Collapsible Group Item #2 </a>
-							</h4>
-						</div>
-						<div id="collapseTwo" class="panel-collapse collapse"
-							role="tabpanel" aria-labelledby="headingTwo">
-							<ul class="list-group">
-								<a class="list-group-item" href="#">Cras justo odio</a>
-								<a class="list-group-item" href="#">Dapibus ac facilisis in</a>
-								<a class="list-group-item" href="#">Morbi leo risus</a>
-								<a class="list-group-item" href="#">Porta ac consectetur ac</a>
-								<a class="list-group-item" href="#">Vestibulum at eros</a>
-							</ul>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading" role="tab" id="headingThree">
-							<h4 class="panel-title">
-								<a class="collapsed" role="button" data-toggle="collapse"
-									data-parent="#accordion" href="#collapseThree"
-									aria-expanded="false" aria-controls="collapseThree">
-									Collapsible Group Item #3 </a>
-							</h4>
-						</div>
-						<div id="collapseThree" class="panel-collapse collapse"
-							role="tabpanel" aria-labelledby="headingThree">
-							<ul class="list-group">
-								<a class="list-group-item" href="#">Cras justo odio</a>
-								<a class="list-group-item" href="#">Dapibus ac facilisis in</a>
-								<a class="list-group-item" href="#">Morbi leo risus</a>
-								<a class="list-group-item" href="#">Porta ac consectetur ac</a>
-								<a class="list-group-item" href="#">Vestibulum at eros</a>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-
+			<!-- 左侧list面板 -->
+			<#include "../list.html">
 
 			<div class="col-md-9">
 				<div class="panel panel-default">
@@ -115,9 +52,11 @@
 	</div>
 
 	<!-- 底部 --> 
-	<#include "../common/commonFoot.html"> 
+	<#include "../../common/commonFoot.html"> 
 	<!-- <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&amp;id=12&amp;icon=1&amp;num=1"></iframe></div> -->
-	<#include "../common/commonJs.html">
+	<#include "../../common/commonJs.html">
+	<script type="text/javascript" src="resources/Front/js/blog.js"></script>
+	<script type="text/javascript" src="resources/Front/js/markdown/markdown.js"></script>
 	<script src="resources/Front/editor.md-master/editormd.js"></script> 
 	<script src="resources/Front/editor.md-master/plugins/help-dialog/help-dialog.js"></script> 
 	<script type="text/javascript">
@@ -168,12 +107,7 @@
 		    });
 		});
 		//testEditor.getHTML();
-	</script>
-	<script type="text/javascript">
-		$("#save").bind('click', function() {
-            var html = testEditor.getHTML();
-            console.log(html);
-		})
+		//testEditor.getMarkdown();
 	</script>
 </body>
 </html>

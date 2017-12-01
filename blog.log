@@ -7,3 +7,2235 @@
 
 2017-11-29 10:56:49
 [WARN]-[Thread: qtp405662939-19]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /resources/Front/css
+
+2017-11-29 12:38:34
+[ERROR]-[Thread: qtp1032986144-24]-[freemarker.log._Log4JLoggerFactory$Log4JLogger.error()]: Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> message  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 66]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${message.detail}  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 64]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-11-29 12:38:34
+[ERROR]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: /markdown
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> message  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 66]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${message.detail}  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 64]
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> message  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 66]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${message.detail}  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 64]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	... 26 more
+
+2017-11-29 12:38:35
+[ERROR]-[Thread: qtp1032986144-22]-[freemarker.log._Log4JLoggerFactory$Log4JLogger.error()]: Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> message  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 66]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${message.detail}  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 64]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-11-29 12:38:35
+[ERROR]-[Thread: qtp1032986144-22]-[com.jfinal.core.ActionHandler.handle()]: /markdown
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> message  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 66]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${message.detail}  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 64]
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> message  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 66]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${message.detail}  [in template "WEB-INF/Front/markdown/markdown.html" at line 117, column 64]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	... 26 more
+
+2017-11-29 14:57:03
+[WARN]-[Thread: qtp1032986144-25]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-29 14:57:09
+[WARN]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-29 14:57:11
+[WARN]-[Thread: qtp1032986144-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-29 15:37:45
+[ERROR]-[Thread: qtp1032986144-18]-[com.jfinal.core.ActionHandler.handle()]: /markdown
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template "/WEB-INF/Front/markdown/markdown.html" not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template "/WEB-INF/Front/markdown/markdown.html" not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:742)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:665)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:156)
+	... 26 more
+
+2017-11-29 15:53:12
+[WARN]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-29 15:55:57
+[WARN]-[Thread: qtp1032986144-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /admin/index
+
+2017-11-29 16:01:57
+[WARN]-[Thread: qtp1032986144-25]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-29 16:13:52
+[WARN]-[Thread: qtp1032986144-21]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-29 17:30:00
+[WARN]-[Thread: qtp1032986144-21]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-30 10:41:44
+[WARN]-[Thread: qtp1032986144-21]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-30 10:41:48
+[WARN]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-30 16:06:59
+[ERROR]-[Thread: main]-[com.jfinal.kit.LogKit.error()]: port: 80 already in use!
+java.lang.IllegalStateException: port: 80 already in use!
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:87)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:70)
+	at com.jfinal.core.JFinal.start(JFinal.java:157)
+	at com.blog.common.start.main(start.java:11)
+
+2017-11-30 16:07:23
+[ERROR]-[Thread: qtp1032986144-23]-[freemarker.log._Log4JLoggerFactory$Log4JLogger.error()]: Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${user.user_name}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-11-30 16:07:23
+[ERROR]-[Thread: qtp1032986144-23]-[com.jfinal.core.ActionHandler.handle()]: /blog
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	... 26 more
+
+2017-11-30 16:07:31
+[ERROR]-[Thread: qtp1032986144-25]-[com.jfinal.core.ActionHandler.handle()]: /blog
+java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String
+	at com.blog.webSrc.controller.BlogController.index(BlogController.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-11-30 16:08:21
+[ERROR]-[Thread: qtp1032986144-21]-[com.jfinal.core.ActionHandler.handle()]: /blog
+java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String
+	at com.blog.webSrc.controller.BlogController.index(BlogController.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-11-30 16:08:38
+[ERROR]-[Thread: qtp1032986144-21]-[freemarker.log._Log4JLoggerFactory$Log4JLogger.error()]: Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${user.user_name}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-11-30 16:08:38
+[ERROR]-[Thread: qtp1032986144-21]-[com.jfinal.core.ActionHandler.handle()]: /blog
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	... 26 more
+
+2017-11-30 16:10:42
+[ERROR]-[Thread: qtp1032986144-21]-[freemarker.log._Log4JLoggerFactory$Log4JLogger.error()]: Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${user.user_name}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-11-30 16:10:42
+[ERROR]-[Thread: qtp1032986144-21]-[com.jfinal.core.ActionHandler.handle()]: /blog
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	... 26 more
+
+2017-11-30 16:11:02
+[ERROR]-[Thread: qtp1032986144-24]-[freemarker.log._Log4JLoggerFactory$Log4JLogger.error()]: Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user.user_email  [in template "WEB-INF/Front/blog/blog.html" at line 53, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${user.user_email}  [in template "WEB-INF/Front/blog/blog.html" at line 53, column 87]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:382)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-11-30 16:11:02
+[ERROR]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: /blog
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user.user_email  [in template "WEB-INF/Front/blog/blog.html" at line 53, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_email}  [in template "WEB-INF/Front/blog/blog.html" at line 53, column 87]
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user.user_email  [in template "WEB-INF/Front/blog/blog.html" at line 53, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_email}  [in template "WEB-INF/Front/blog/blog.html" at line 53, column 87]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:382)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	... 26 more
+
+2017-11-30 16:15:30
+[WARN]-[Thread: qtp1032986144-22]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-30 17:20:56
+[WARN]-[Thread: qtp1032986144-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /markdown/articleType
+
+2017-11-30 17:21:50
+[ERROR]-[Thread: qtp1032986144-22]-[freemarker.log._Log4JLoggerFactory$Log4JLogger.error()]: Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:116)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-11-30 17:21:50
+[ERROR]-[Thread: qtp1032986144-22]-[com.jfinal.core.ActionHandler.handle()]: /blog
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:116)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	... 26 more
+
+2017-11-30 17:22:12
+[ERROR]-[Thread: qtp1032986144-21]-[freemarker.log._Log4JLoggerFactory$Log4JLogger.error()]: Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:116)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-11-30 17:22:12
+[ERROR]-[Thread: qtp1032986144-21]-[com.jfinal.core.ActionHandler.handle()]: /blog
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:116)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	... 26 more
+
+2017-11-30 17:22:15
+[WARN]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-30 17:22:18
+[WARN]-[Thread: qtp1032986144-20]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-11-30 17:22:33
+[WARN]-[Thread: qtp1032986144-21]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /markdown/articleType
+
+2017-11-30 17:23:01
+[ERROR]-[Thread: qtp1032986144-20]-[com.jfinal.core.ActionHandler.handle()]: /blog/markdown/articleType
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'myblog.article_aort' doesn't exist
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:581)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:591)
+	at com.blog.webSrc.services.ArticleSortServices.findAll(ArticleSortServices.java:13)
+	at com.blog.webSrc.controller.MarkdownController.articleType(MarkdownController.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'myblog.article_aort' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2683)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2144)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2310)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2714)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_executeQuery(WallFilter.java:622)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2711)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_executeQuery(FilterEventAdapter.java:465)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2711)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeQuery(PreparedStatementProxyImpl.java:145)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:562)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:579)
+	... 36 more
+
+2017-11-30 17:24:04
+[ERROR]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: /blog/markdown/articleType
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'myblog.article_aort' doesn't exist
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:581)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:591)
+	at com.blog.webSrc.services.ArticleSortServices.findAll(ArticleSortServices.java:13)
+	at com.blog.webSrc.controller.MarkdownController.articleType(MarkdownController.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'myblog.article_aort' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2683)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2144)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2310)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2714)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_executeQuery(WallFilter.java:622)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2711)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_executeQuery(FilterEventAdapter.java:465)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_executeQuery(FilterChainImpl.java:2711)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.executeQuery(PreparedStatementProxyImpl.java:145)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:562)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:579)
+	... 36 more
+
+2017-11-30 17:57:25
+[ERROR]-[Thread: qtp1032986144-23]-[freemarker.log._Log4JLoggerFactory$Log4JLogger.error()]: Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:116)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-11-30 17:57:25
+[ERROR]-[Thread: qtp1032986144-23]-[com.jfinal.core.ActionHandler.handle()]: /blog
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:116)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	... 26 more
+
+2017-12-01 10:00:43
+[ERROR]-[Thread: qtp1032986144-23]-[freemarker.log._Log4JLoggerFactory$Log4JLogger.error()]: Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:116)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 10:00:43
+[ERROR]-[Thread: qtp1032986144-23]-[com.jfinal.core.ActionHandler.handle()]: /blog
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:116)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	... 26 more
+
+2017-12-01 10:00:45
+[WARN]-[Thread: qtp1032986144-20]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-12-01 10:00:47
+[ERROR]-[Thread: qtp1032986144-24]-[freemarker.log._Log4JLoggerFactory$Log4JLogger.error()]: Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:116)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 10:00:47
+[ERROR]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: /blog
+com.jfinal.render.RenderException: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:99)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> user  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 89]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction:
+==> ${user.user_name!""}  [in template "WEB-INF/Front/blog/blog.html" at line 47, column 87]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.UnexpectedTypeException.newDesciptionBuilder(UnexpectedTypeException.java:41)
+	at freemarker.core.UnexpectedTypeException.<init>(UnexpectedTypeException.java:24)
+	at freemarker.core.Dot._eval(Dot.java:81)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.DefaultToExpression._eval(DefaultToExpression.java:116)
+	at freemarker.core.Expression.eval(Expression.java:111)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:158)
+	... 26 more
+
+2017-12-01 10:00:50
+[WARN]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-12-01 11:01:48
+[ERROR]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: /index
+java.lang.NullPointerException
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 11:03:01
+[ERROR]-[Thread: qtp1032986144-23]-[com.jfinal.core.ActionHandler.handle()]: /index
+java.lang.NullPointerException
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 11:03:01
+[ERROR]-[Thread: qtp1032986144-23]-[com.jfinal.core.JFinalFilter.doFilter()]: /index
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template "/WEB-INF/Front/index/WEB-INF/500.html" not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.render.ErrorRender.render(ErrorRender.java:51)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:137)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template "/WEB-INF/Front/index/WEB-INF/500.html" not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:742)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:665)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:156)
+	... 27 more
+
+2017-12-01 11:03:44
+[ERROR]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: /index
+java.lang.NullPointerException
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 11:03:44
+[ERROR]-[Thread: qtp1032986144-24]-[com.jfinal.core.JFinalFilter.doFilter()]: /index
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template "/WEB-INF/Front/index/WEB-INF/500.html" not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:161)
+	at com.jfinal.render.ErrorRender.render(ErrorRender.java:51)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:137)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template "/WEB-INF/Front/index/WEB-INF/500.html" not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:742)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:665)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:156)
+	... 27 more
+
+2017-12-01 11:04:12
+[ERROR]-[Thread: qtp1032986144-25]-[com.jfinal.core.ActionHandler.handle()]: /index
+java.lang.NullPointerException
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 11:04:20
+[ERROR]-[Thread: qtp1032986144-22]-[com.jfinal.core.ActionHandler.handle()]: /index
+java.lang.NullPointerException
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 11:04:22
+[ERROR]-[Thread: qtp1032986144-20]-[com.jfinal.core.ActionHandler.handle()]: /index
+java.lang.NullPointerException
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 11:04:40
+[ERROR]-[Thread: qtp1032986144-20]-[com.jfinal.core.ActionHandler.handle()]: /index
+java.lang.NullPointerException
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 11:05:37
+[ERROR]-[Thread: qtp1032986144-22]-[com.jfinal.core.ActionHandler.handle()]: /index
+java.lang.NullPointerException
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 11:09:13
+[ERROR]-[Thread: qtp1032986144-20]-[com.jfinal.core.ActionHandler.handle()]: /index
+java.lang.NullPointerException
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 11:09:26
+[ERROR]-[Thread: qtp1032986144-25]-[com.jfinal.core.ActionHandler.handle()]: /index
+java.lang.NullPointerException
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-12-01 11:09:59
+[ERROR]-[Thread: qtp1032986144-24]-[com.jfinal.core.ActionHandler.handle()]: /index
+com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'users.user_name,users.user_ima',expect IDENTIFIER, actual IDENTIFIER users : users.user_name,users.user_image_url,content_info.content_id,content_info.user_id,	content_info.type_id,content_info.title,content_info.content,content_info.create_dt,content_info.read_count, content_info.laud_count,content_info.comment_count,content_info.dr,art.type_code,art.type_name  FROM content_info content_info  INNER JOIN blog_user users ON content_info.user_id=users.user_id	LEFT JOIN article_sort art ON content_info.type_id=art.type_idORDER BY create_dt DESC  limit 0, 10
+	at com.jfinal.plugin.activerecord.Model.doPaginate(Model.java:337)
+	at com.jfinal.plugin.activerecord.Model.paginate(Model.java:313)
+	at com.blog.webSrc.services.ContentInfoServices.findAll(ContentInfoServices.java:26)
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'users.user_name,users.user_ima',expect IDENTIFIER, actual IDENTIFIER users : users.user_name,users.user_image_url,content_info.content_id,content_info.user_id,	content_info.type_id,content_info.title,content_info.content,content_info.create_dt,content_info.read_count, content_info.laud_count,content_info.comment_count,content_info.dr,art.type_code,art.type_name  FROM content_info content_info  INNER JOIN blog_user users ON content_info.user_id=users.user_id	LEFT JOIN article_sort art ON content_info.type_id=art.type_idORDER BY create_dt DESC  limit 0, 10
+	at com.alibaba.druid.wall.WallFilter.check(WallFilter.java:725)
+	at com.alibaba.druid.wall.WallFilter.connection_prepareStatement(WallFilter.java:253)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.filter.FilterAdapter.connection_prepareStatement(FilterAdapter.java:928)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:122)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:346)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.plugin.activerecord.SqlReporter.invoke(SqlReporter.java:58)
+	at com.sun.proxy.$Proxy4.prepareStatement(Unknown Source)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:560)
+	at com.jfinal.plugin.activerecord.Model.doPaginateByFullSql(Model.java:378)
+	at com.jfinal.plugin.activerecord.Model.doPaginate(Model.java:335)
+	... 36 more
+Caused by: com.alibaba.druid.sql.parser.ParserException: syntax error, error in :'users.user_name,users.user_ima',expect IDENTIFIER, actual IDENTIFIER users
+	at com.alibaba.druid.sql.parser.SQLParser.printError(SQLParser.java:239)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:362)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:79)
+	at com.alibaba.druid.wall.WallProvider.checkInternal(WallProvider.java:620)
+	at com.alibaba.druid.wall.WallProvider.check(WallProvider.java:574)
+	at com.alibaba.druid.wall.WallFilter.check(WallFilter.java:712)
+	... 52 more
+
+2017-12-01 11:11:02
+[ERROR]-[Thread: qtp1032986144-25]-[com.jfinal.core.ActionHandler.handle()]: /index
+com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'RDER BY create_dt DESC  limit 0, 10',expect BY, actual BY BY : SELECT users.user_name,users.user_image_url,content_info.content_id,content_info.user_id,	content_info.type_id,content_info.title,content_info.content,content_info.create_dt,content_info.read_count, content_info.laud_count,content_info.comment_count,content_info.dr,art.type_code,art.type_name  FROM content_info content_info  INNER JOIN blog_user users ON content_info.user_id=users.user_id	LEFT JOIN article_sort art ON content_info.type_id=art.type_idORDER BY create_dt DESC  limit 0, 10
+	at com.jfinal.plugin.activerecord.Model.doPaginate(Model.java:337)
+	at com.jfinal.plugin.activerecord.Model.paginate(Model.java:313)
+	at com.blog.webSrc.services.ContentInfoServices.findAll(ContentInfoServices.java:26)
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'RDER BY create_dt DESC  limit 0, 10',expect BY, actual BY BY : SELECT users.user_name,users.user_image_url,content_info.content_id,content_info.user_id,	content_info.type_id,content_info.title,content_info.content,content_info.create_dt,content_info.read_count, content_info.laud_count,content_info.comment_count,content_info.dr,art.type_code,art.type_name  FROM content_info content_info  INNER JOIN blog_user users ON content_info.user_id=users.user_id	LEFT JOIN article_sort art ON content_info.type_id=art.type_idORDER BY create_dt DESC  limit 0, 10
+	at com.alibaba.druid.wall.WallFilter.check(WallFilter.java:725)
+	at com.alibaba.druid.wall.WallFilter.connection_prepareStatement(WallFilter.java:253)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.filter.FilterAdapter.connection_prepareStatement(FilterAdapter.java:928)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:122)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:346)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.plugin.activerecord.SqlReporter.invoke(SqlReporter.java:58)
+	at com.sun.proxy.$Proxy4.prepareStatement(Unknown Source)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:560)
+	at com.jfinal.plugin.activerecord.Model.doPaginateByFullSql(Model.java:378)
+	at com.jfinal.plugin.activerecord.Model.doPaginate(Model.java:335)
+	... 36 more
+Caused by: com.alibaba.druid.sql.parser.ParserException: syntax error, error in :'RDER BY create_dt DESC  limit 0, 10',expect BY, actual BY BY
+	at com.alibaba.druid.sql.parser.SQLParser.printError(SQLParser.java:239)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:362)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:79)
+	at com.alibaba.druid.wall.WallProvider.checkInternal(WallProvider.java:620)
+	at com.alibaba.druid.wall.WallProvider.check(WallProvider.java:574)
+	at com.alibaba.druid.wall.WallFilter.check(WallFilter.java:712)
+	... 52 more
+
+2017-12-01 11:11:29
+[ERROR]-[Thread: qtp1032986144-21]-[com.jfinal.core.ActionHandler.handle()]: /index
+com.jfinal.plugin.activerecord.ActiveRecordException: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'RDER BY content_info.create_dt DESC',expect BY, actual BY BY : SELECT users.user_name,users.user_image_url,content_info.content_id,content_info.user_id,	content_info.type_id,content_info.title,content_info.content,content_info.create_dt,content_info.read_count, content_info.laud_count,content_info.comment_count,content_info.dr,art.type_code,art.type_name  FROM content_info content_info  INNER JOIN blog_user users ON content_info.user_id=users.user_id	LEFT JOIN article_sort art ON content_info.type_id=art.type_idORDER BY content_info.create_dt DESC  limit 0, 10
+	at com.jfinal.plugin.activerecord.Model.doPaginate(Model.java:337)
+	at com.jfinal.plugin.activerecord.Model.paginate(Model.java:313)
+	at com.blog.webSrc.services.ContentInfoServices.findAll(ContentInfoServices.java:26)
+	at com.blog.webSrc.controller.IndexController.index(IndexController.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:73)
+	at com.jfinal.ext.interceptor.SessionInViewInterceptor.intercept(SessionInViewInterceptor.java:44)
+	at com.jfinal.aop.Invocation.invoke(Invocation.java:67)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:74)
+	at com.blog.common.config.BasePathHandler.handle(BasePathHandler.java:15)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:73)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: sql injection violation, syntax error: syntax error, error in :'RDER BY content_info.create_dt DESC',expect BY, actual BY BY : SELECT users.user_name,users.user_image_url,content_info.content_id,content_info.user_id,	content_info.type_id,content_info.title,content_info.content,content_info.create_dt,content_info.read_count, content_info.laud_count,content_info.comment_count,content_info.dr,art.type_code,art.type_name  FROM content_info content_info  INNER JOIN blog_user users ON content_info.user_id=users.user_id	LEFT JOIN article_sort art ON content_info.type_id=art.type_idORDER BY content_info.create_dt DESC  limit 0, 10
+	at com.alibaba.druid.wall.WallFilter.check(WallFilter.java:725)
+	at com.alibaba.druid.wall.WallFilter.connection_prepareStatement(WallFilter.java:253)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.filter.FilterAdapter.connection_prepareStatement(FilterAdapter.java:928)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:122)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:346)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.jfinal.plugin.activerecord.SqlReporter.invoke(SqlReporter.java:58)
+	at com.sun.proxy.$Proxy4.prepareStatement(Unknown Source)
+	at com.jfinal.plugin.activerecord.Model.find(Model.java:560)
+	at com.jfinal.plugin.activerecord.Model.doPaginateByFullSql(Model.java:378)
+	at com.jfinal.plugin.activerecord.Model.doPaginate(Model.java:335)
+	... 36 more
+Caused by: com.alibaba.druid.sql.parser.ParserException: syntax error, error in :'RDER BY content_info.create_dt DESC',expect BY, actual BY BY
+	at com.alibaba.druid.sql.parser.SQLParser.printError(SQLParser.java:239)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:362)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:79)
+	at com.alibaba.druid.wall.WallProvider.checkInternal(WallProvider.java:620)
+	at com.alibaba.druid.wall.WallProvider.check(WallProvider.java:574)
+	at com.alibaba.druid.wall.WallFilter.check(WallFilter.java:712)
+	... 52 more
+
+2017-12-01 11:41:35
+[WARN]-[Thread: qtp1543237999-22]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /

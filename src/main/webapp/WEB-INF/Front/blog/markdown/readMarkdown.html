@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- markdown内容 -->
+	<div id="doc-content"><textarea style="display:none;">```java
+		package com.blog.common;
+		
+		import com.jfinal.core.JFinal;
+		
+		public class start {
+		
+			public static void main(String[] args) {
+				/**
+				 * 特别注意：Eclipse 之下建议的启动方式
+				 */
+				JFinal.start("src/main/webapp", 80, "/", 5);
+				
+				/**
+				 * 特别注意：IDEA 之下建议的启动方式，仅比 eclipse 之下少了最后一个参数
+				 */
+				// JFinal.start("src/main/webapp", 80, "/");
+			}
+		}
+		
+		```
+	</textarea> </div>
+	<script src="resources/Front/editor.md-master/lib/marked.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/prettify.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/raphael.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/underscore.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/sequence-diagram.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/flowchart.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/jquery.flowchart.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	        var wordsView;
+	        wordsView = editormd.markdownToHTML("doc-content", {
+	            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+	            emoji           : true,
+	            taskList        : true,
+	            tex             : true,  // 默认不解析
+	            flowChart       : true,  // 默认不解析
+	            sequenceDiagram : true,  // 默认不解析
+	        });
+	    })
+	</script>
+</body>
+</html>

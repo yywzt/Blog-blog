@@ -80,3 +80,14 @@ html, body, #wrap { height:100%; }
     top: 50%;
     left: 10px;
     width: 40px; }
+.listli{
+	padding-left: 40px;
+}
+.menu_dropdown-arrow {
+	float:right;
+	transition-duration: 0.3s;
+    transition-property: all;
+}
+.Flip{
+	transform: rotate(180deg)!important;
+}

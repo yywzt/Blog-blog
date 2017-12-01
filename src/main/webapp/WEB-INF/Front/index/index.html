@@ -113,57 +113,58 @@
 						</ul>
 					</div>
 					<ul class="article-list tab-list active">
-						<li class="item">
-							<div class="item-img">
-								<a href="/article/4205.html" title="Tomcat多个实例部署实践"
-									target="_blank"> <img width="480" height="300"
-									src="resources/Front/img/3.jpg"
-									class="attachment-post-thumbnail size-post-thumbnail j-lazy wp-post-image"
-									alt="Tomcat多个实例部署实践"
-									data-original="/templates/cms.pintu/images/random/9.jpg"
-									style="display: inline;"">
-								</a> <a href="/article-technology-1.html" class="item-category">Technology</a>
-							</div>
-							<div class="item-content">
-								<h2 class="item-title">
-									<a href="/article/4205.html" title="Tomcat多个实例部署实践"
-										target="_blank">Tomcat多个实例部署实践</a>
-								</h2>
-								<div class="item-excerpt">
-									<p>背景：昨天新够了一台2G内存的主机，所以我折腾折腾多应用 所以整合了多个节点；
-										[dzapp@VM_137_106_centos app]$ ls -ltr total 8 drwxrwxr-x 8
-										dzapp dzapp 4096 May 3 17:03 app1 drwxrwxr-x 8 dzapp dzapp
-										4096 May 3 17:31 app2 [dzapp@VM_137_106_centos app]$
-										分别为节点1，节点2； 下面以节点1为例构建： [dzapp@VM_137_106_centos tomcat]$ pwd
-										/home/dzapp/bin/tomcat [</p>
+						<#list pagelist as list>
+							<li class="item">
+								<div class="item-img">
+									<a href="/article/4205.html" title=${list.title}
+										target="_blank"> <img width="480" height="300"
+										src="resources/Front/img/3.jpg"
+										class="attachment-post-thumbnail size-post-thumbnail j-lazy wp-post-image"
+										alt=${list.title}
+										data-original="/templates/cms.pintu/images/random/9.jpg"
+										style="display: inline;"">
+									</a> <a href="/article-technology-1.html" class="item-category">${list.type_name}</a>
 								</div>
-								<div class="item-meta">
-									<div class="item-meta-li author">
-										<a data-user="69" target="_blank" href="#" class="avatar">
-											<img src="resources/Front/img/user.jpg"
-											class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-uploaded"
-											width="60" height="60" alt="yw">
-										</a> <a class="nickname" href="/user/1" target="_blank">yw</a>
+								<div class="item-content">
+									<h2 class="item-title">
+										<a href="#" title="${list.title}"
+											target="_blank">${list.title}</a>
+									</h2>
+									<div class="item-excerpt">
+										<p>背景：昨天新够了一台2G内存的主机，所以我折腾折腾多应用 所以整合了多个节点；
+											[dzapp@VM_137_106_centos app]$ ls -ltr total 8 drwxrwxr-x 8
+											dzapp dzapp 4096 May 3 17:03 app1 drwxrwxr-x 8 dzapp dzapp
+											4096 May 3 17:31 app2 [dzapp@VM_137_106_centos app]$
+											分别为节点1，节点2； 下面以节点1为例构建： [dzapp@VM_137_106_centos tomcat]$ pwd
+											/home/dzapp/bin/tomcat [</p>
 									</div>
-									<span class="item-meta-li date">2017-05-04 11:47:02</span> <span
-										class="item-meta-li views" title="阅读数"><i
-										class="fa fa-eye"></i><span class="data">290</span></span> <span
-										class="item-meta-li likes" title="点赞数"><i
-										class="fa fa-thumbs-up"></i><span class="data">1</span></span> <a
-										class="item-meta-li comments"
-										href="/article/4205.html#comments" target="_blank" title="评论数">
-										<i class="fa fa-comment"></i> <span class="data">评论: 0</span>
-									</a> <span class="item-meta-li hearts" title="喜欢数"><i
-										class="fa fa-heart"></i><span class="data">4</span></span>
+									<div class="item-meta">
+										<div class="item-meta-li author">
+											<a data-user="69" target="_blank" href="#" class="avatar">
+												<img src="${list.user_image_url}"
+												class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-uploaded"
+												width="60" height="60" alt="yw">
+											</a> <a class="nickname" href="#" target="_blank">${list.user_name}</a>
+										</div>
+										<span class="item-meta-li date">${list.create_dt}</span> <span
+											class="item-meta-li views" title="阅读数"><i
+											class="fa fa-eye"></i><span class="data">${list.read_count}</span></span> <span
+											class="item-meta-li likes" title="点赞数"><i
+											class="fa fa-thumbs-up"></i><span class="data">${list.laud_count}</span></span> <a
+											class="item-meta-li comments"
+											href="/article/4205.html#comments" target="_blank" title="评论数">
+											<i class="fa fa-comment"></i> <span class="data">评论: ${list.comment_count}</span>
+										</a> <span class="item-meta-li hearts" title="喜欢数"><i
+											class="fa fa-heart"></i><span class="data">${list.comment_count}</span></span>
+									</div>
 								</div>
-							</div>
-						</li>
+							</li>
+						</#list>
 					</ul>
-					<div class="pagination clearfix">
-						<span>1 / 2</span> <a href="">上一页</a> <a href="">1</a> <a href="">2</a>
-						<a href="">3</a> <a href="">4</a> <a href="">5</a> <a href="">6</a>
-						<a href="">7</a> <a href="">下一页</a>
-					</div>
+					<!--分页-->
+    				<div id="pagediv" class="pagination clearfix" style="padding-left: 12px;">
+
+    				</div>
 				</div>
 
 			</div>
@@ -231,5 +232,25 @@
 	<#include "../common/commonFoot.html"> 
 	<!-- <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&amp;id=12&amp;icon=1&amp;num=1"></iframe></div> -->
 	<#include "../common/commonJs.html">
+	<script src="resources/common/jqPaginator.js"></script>
+	<script type="text/javascript">
+	//分页查询
+	$.jqPaginator('#pagediv', {
+	    totalPages: ${totalPage},
+	    visiblePages: 10,
+	    currentPage: ${curPage},
+	    first: '<li class="first"><a href="javascript:;">首页</a></li>',
+	    prev: '<li class="prev"><a href="javascript:;">上一页</a></li>',
+	    next: '<li class="next"><a href="javascript:;">下一页</a></li>',
+	    page: '<li class="page"><a href="javascript:;" data = "{{page}}">{{page}}</a></li>', 
+	    last: '<li class="last"><a href="javascript:;">末页</a></li>', 
+	    onPageChange: function (num, type) {
+	    	console.log('当前第' + num + '页'+"type"+type);
+	    	if(type==='change'){
+	    		window.location.href="/index?pageNumber="+num;
+	    	}
+	    }
+	});
+	</script>
 </body>
 </html>

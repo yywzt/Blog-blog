@@ -71,4 +71,11 @@ $(function(){
     $(".dropdown.menu-item").mouseout(function(){
     	$(this).find("ul").hide()
     })
+    
+    $('.panel-collapse.collapse').on('hidden.bs.collapse', function () {
+		$($(this)).prev().find(".menu_dropdown-arrow").toggleClass("Flip");
+	})
+    $('.panel-collapse.collapse').on('shown.bs.collapse', function () {
+		$($(this)).prev().find(".menu_dropdown-arrow").toggleClass("Flip");
+	})
 })

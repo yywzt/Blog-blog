@@ -26,7 +26,7 @@
 						</ul></li>
 					</li>
 					<li class="menu-item"><a href="/community">社区</a></li>
-					<li class="menu-item"><a href="/blog">博客</a> <!-- <ul role="menu" class=" dropdown-menu" style="display: none;">
+					<li class="menu-item"><a href="/blog">我的博客</a> <!-- <ul role="menu" class=" dropdown-menu" style="display: none;">
 								<li class="menu-item"><a href="http://pan.baidu.com/s/1boHZF0j"> 获取本站安装包</a></li>
 								<li class="menu-item"><a href="http://git.oschina.net/duzhime/DUZHI_BLOG"> 获取本站源码包</a></li>
 							</ul> --></li>
@@ -45,7 +45,7 @@
 					<#if session.user_name??&&session.user_id??>
 						<div id="j-user-wrap">
 							<ul class="profile">
-								<li class="menu-item dropdown"><a href="#" data-toggle="dropdown" data-target="#">
+								<li class="menu-item dropdown"><a href="javascript:void(0);" data-toggle="dropdown" data-target="#">
 									<img src="upload/temp/headportrait/<#if session.user_image_url??>${session.user_image_url}<#else>default.jpg</#if>">${session.user_name}</a>                
 									<ul class="dropdown-menu" style="display: none;">	
 										<li><a href="#">个人中心</a></li>
