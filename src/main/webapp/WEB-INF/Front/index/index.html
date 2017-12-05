@@ -77,30 +77,15 @@
 					</div>
 					<div class="sec-panel-body">
 						<ul class="list topic-list">
-							<li class="topic"><a class="topic-wrap"
-								href="/article-java-1.html" target="_blank">
-									<div class="cover-container">
-										<img src="resources/Front/img/top.jpg" alt="java">
-									</div> <span>java</span>
-							</a></li>
-							<li class="topic"><a class="topic-wrap"
-								href="/article-jpress-1.html" target="_blank">
-									<div class="cover-container">
-										<img src="resources/Front/img/top.jpg" alt="jpress">
-									</div> <span>jpress</span>
-							</a></li>
-							<li class="topic"><a class="topic-wrap"
-								href="/article-jfinal-1.html" target="_blank">
-									<div class="cover-container">
-										<img src="resources/Front/img/top.jpg" alt="jfinal">
-									</div> <span>jfinal</span>
-							</a></li>
-							<li class="topic"><a class="topic-wrap"
-								href="/article-java-1.html" target="_blank">
-									<div class="cover-container">
-										<img src="resources/Front/img/top.jpg" alt="java">
-									</div> <span>java</span>
-							</a></li>
+							<#list articleSorts as list>
+								<li class="topic"><a class="topic-wrap"
+									href="/article-java-${list.type_id}.html" target="_blank">
+										<div class="cover-container">
+											<img src="resources/Front/img/top.jpg" alt="${list.type_name}" />
+										</div><span>${list.type_name}</span>
+									</a>
+								</li>
+							</#list>
 						</ul>
 					</div>
 				</div>
@@ -116,18 +101,18 @@
 						<#list pagelist as list>
 							<li class="item">
 								<div class="item-img">
-									<a href="/article/4205.html" title=${list.title}
+									<a href="/article/${list.content_id}.html" title=${list.title}
 										target="_blank"> <img width="480" height="300"
 										src="resources/Front/img/3.jpg"
 										class="attachment-post-thumbnail size-post-thumbnail j-lazy wp-post-image"
 										alt=${list.title}
 										data-original="/templates/cms.pintu/images/random/9.jpg"
 										style="display: inline;"">
-									</a> <a href="/article-technology-1.html" class="item-category">${list.type_name}</a>
+									</a> <a href="/article-technology-${list.type_id}.html" class="item-category">${list.type_name}</a>
 								</div>
 								<div class="item-content">
 									<h2 class="item-title">
-										<a href="#" title="${list.title}"
+										<a href="${list.content_id}" title="${list.title}"
 											target="_blank">${list.title}</a>
 									</h2>
 									<div class="item-excerpt">
@@ -140,7 +125,7 @@
 									</div>
 									<div class="item-meta">
 										<div class="item-meta-li author">
-											<a data-user="69" target="_blank" href="#" class="avatar">
+											<a data-user="${list.user_id}" target="_blank" href="#" class="avatar">
 												<img src="${list.user_image_url}"
 												class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-uploaded"
 												width="60" height="60" alt="yw">
@@ -173,54 +158,18 @@
 			<aside class="sidebar">
 				<div id="views-2" class="widget widget_views">
 					<h3 class="widget-title">热门阅读</h3>
-					<ul>
-						<li><a href="javascript:void(0);" title="多种负载均衡算法及其Java代码实现">
-								多种负载均衡算法及其Java代码实现</a></li>
-						<li><a href="javascript:void(0);" title="DUZHI_BLOG主题使用配置指南">
-								DUZHI_BLOG主题使用配置指南</a></li>
-						<li><a href="javascript:void(0);"
-							title="随笔-Apache tomcat url包含|等特殊字符报错400的问题"> 随笔-Apache
-								tomcat url包含|等特殊字符报错400的问题</a></li>
-						<li><a href="javascript:void(0);"
-							title="分享一个JS/CSS 在线合并压缩的方案"> 分享一个JS/CSS 在线合并压缩的方案</a></li>
-						<li><a href="javascript:void(0);"
-							title="血泪的 Jetty ClassLoader"> 血泪的 Jetty ClassLoader</a></li>
-						<li><a href="javascript:void(0);" title="JPress 二次开发文档">
-								JPress 二次开发文档</a></li>
-						<li><a href="javascript:void(0);" title="理解 ThreadLocal">
-								理解 ThreadLocal</a></li>
-						<li><a href="javascript:void(0);" title="ASM代理的那些事">
-								ASM代理的那些事</a></li>
-						<li><a href="javascript:void(0);" title="良好的日志记录规范">
-								良好的日志记录规范</a></li>
-						<li><a href="javascript:void(0);" title="关于Netty 的退出机制">
-								关于Netty 的退出机制</a></li>
+					<ul class="list-group">
+						<#list contentInfos as list>
+							<li class="list-group-item"><span class="badge">${list.read_count}</span><a href="javascript:void(${list.content_id});" title="${list.title}">${list.title}</a></li>
+						</#list>
 					</ul>
 				</div>
 				<div id="views-4" class="widget widget_views">
-					<h3 class="widget-title">热门阅读</h3>
-					<ul>
-						<li><a href="javascript:void(0);" title="多种负载均衡算法及其Java代码实现">
-								多种负载均衡算法及其Java代码实现</a></li>
-						<li><a href="javascript:void(0);" title="DUZHI_BLOG主题使用配置指南">
-								DUZHI_BLOG主题使用配置指南</a></li>
-						<li><a href="javascript:void(0);"
-							title="随笔-Apache tomcat url包含|等特殊字符报错400的问题"> 随笔-Apache
-								tomcat url包含|等特殊字符报错400的问题</a></li>
-						<li><a href="javascript:void(0);"
-							title="分享一个JS/CSS 在线合并压缩的方案"> 分享一个JS/CSS 在线合并压缩的方案</a></li>
-						<li><a href="javascript:void(0);"
-							title="血泪的 Jetty ClassLoader"> 血泪的 Jetty ClassLoader</a></li>
-						<li><a href="javascript:void(0);" title="JPress 二次开发文档">
-								JPress 二次开发文档</a></li>
-						<li><a href="javascript:void(0);" title="理解 ThreadLocal">
-								理解 ThreadLocal</a></li>
-						<li><a href="javascript:void(0);" title="ASM代理的那些事">
-								ASM代理的那些事</a></li>
-						<li><a href="javascript:void(0);" title="良好的日志记录规范">
-								良好的日志记录规范</a></li>
-						<li><a href="javascript:void(0);" title="关于Netty 的退出机制">
-								关于Netty 的退出机制</a></li>
+					<h3 class="widget-title">评论排行</h3>
+					<ul class="list-group">
+						<#list commentlist as list>
+							<li class="list-group-item"><span class="badge">${list.comment_count}</span><a href="javascript:void(${list.content_id});" title="${list.title}">${list.title}</a></li>
+						</#list>
 					</ul>
 				</div>
 			</aside>

@@ -10,6 +10,10 @@ public class BlogController extends Controller {
 	static BlogUserServices services = BlogUserServices.me;
 	public void index(){
 		Object user_id = getSession().getAttribute(SessionConstants.USER_ID);
+		if(user_id==null){
+			render("/WEB-INF/Front/login.html");
+			return;
+		}
 		BlogUser user = services.findById(user_id);
 		setAttr("user", user);
 		render("blog.html");
