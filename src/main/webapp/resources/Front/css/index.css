@@ -852,10 +852,10 @@ a.label:hover, a.label:focus { color: #fff; text-decoration: none; cursor: point
 .progress-striped .progress-bar-warning { background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) }
 .progress-bar-danger { background-color: #d9534f }
 .progress-striped .progress-bar-danger { background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) }
-.media { margin-top: 15px }
+.media { margin-top: 15px ;    padding: 15px 30px;}
 .media:first-child { margin-top: 0 }
 .media, .media-body { zoom: 1; overflow: hidden }
-.media-body { width: 10000px }
+.media-body { width: 10000px;    padding: 0px 10px; }
 .media-object { display: block }
 .media-object.img-thumbnail { max-width: none }
 .media-right, .media>.pull-right { padding-left: 10px }
@@ -2900,6 +2900,16 @@ div.uimob340 .um-load-items a { -webkit-box-sizing: border-box; -moz-box-sizing:
 	background-color: transparent;
 	border-color: #ddd;
 }
-.list-group-item{
+.sidebar .list-group-item{
 	border:none;
+}
+.line{
+	padding: 16px 15px;
+    display: inline-block;
+}
+.bhover:hover{
+	background:#E8F6E4;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }

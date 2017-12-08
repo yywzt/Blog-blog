@@ -26,7 +26,7 @@
 			    	layer.close(index);
 			    	if(data.success){
 //			    		layer.msg('登录成功', {icon: 1,time:2000});
-			    		location.href='/index';
+			    		location.href=data.url;
 			    	}else{
 			    		if(data.usernamemsg!=null){
 			    			layer.msg(data.usernamemsg, {icon: 1,time:1000});

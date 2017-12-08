@@ -1,8 +1,12 @@
 package com.blog.common.config;
 
+import com.alibaba.druid.filter.config.ConfigTools;
 import com.alibaba.druid.filter.stat.StatFilter;
 import com.alibaba.druid.wall.WallFilter;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.blog.common.model._MappingKit;
+import com.blog.util.StringUtils;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
 import com.jfinal.config.Interceptors;
@@ -18,6 +22,8 @@ import com.jfinal.plugin.c3p0.C3p0Plugin;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
+
+import comblog.common.interceptor.AuthInterceptor;
 
 /**
  * 本 demo 仅表达最为粗浅的 jfinal 用法，更为有价值的实用的企业级用法
@@ -46,6 +52,8 @@ public class MainConfig extends JFinalConfig {
 		//设置404渲染视图
 		me.setError404View("/WEB-INF/404.html");
 		me.setError500View("/WEB-INF/500.html");
+		//关闭FASTJSON的循环引用，避免前端JS库无法解析JSON
+		JSON.DEFAULT_GENERATE_FEATURE |= SerializerFeature.DisableCircularReferenceDetect.getMask();
 		//每页显示数
 		int pageSize = 10;
 		try{
@@ -66,12 +74,37 @@ public class MainConfig extends JFinalConfig {
 	}
 	
 	public static C3p0Plugin createC3p0Plugin() {
-		return new C3p0Plugin(PropKit.get("jdbcUrl"), PropKit.get("user"),
-				PropKit.get("password"));
+		//根据开发模式配置是否使用加密
+		String password = PropKit.get("password");
+		if(!PropKit.getBoolean("devMode")){
+			if(StringUtils.isEmpty(password)){
+				password = "";
+			}else{
+				try {
+					password = ConfigTools.decrypt(password);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return new C3p0Plugin(PropKit.get("jdbcUrl"), PropKit.get("user"),password);
 	}
 
 	public static DruidPlugin createDruidPlugin() {
-		DruidPlugin dp = new DruidPlugin(PropKit.get("jdbcUrl"),PropKit.get("user"), PropKit.get("password"));
+		//根据开发模式配置是否使用加密
+		String password = PropKit.get("password");
+		if(!PropKit.getBoolean("devMode")){
+			if(StringUtils.isEmpty(password)){
+				password = "";
+			}else{
+				try {
+					password = ConfigTools.decrypt(password);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		DruidPlugin dp = new DruidPlugin(PropKit.get("jdbcUrl"),PropKit.get("user"), password);
 		dp.addFilter(new StatFilter());
 		WallFilter wall = new WallFilter();
 		wall.setDbType("mysql");
@@ -106,6 +139,7 @@ public class MainConfig extends JFinalConfig {
 	@Override
 	public void configInterceptor(Interceptors me) {
 		me.add(new SessionInViewInterceptor(true));
+		me.add(new AuthInterceptor());
 	}
 	/**
 	 * 配置全局处理器

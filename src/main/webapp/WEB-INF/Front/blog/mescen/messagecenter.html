@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>文章管理</title>
+	<title>消息中心</title>
 	<#include "../../common/commonCss.html">
 	<style type="text/css">
 		.panel>.list-group .list-group-item.active {
@@ -34,10 +34,21 @@
 
 			<div class="col-md-10">
 				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="collapseListGroupHeading1"><i class="fa fa-folder-open" aria-hidden="true"></i> 文章管理</div>
+					<div class="panel-heading" role="tab" id="collapseListGroupHeading1"><i class="fa fa-commenting-o" aria-hidden="true"></i> 消息中心</div>
 					<div>
 						<div class="panel-body">
-							<table id="demo" lay-filter="test"></table>
+							<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+								<ul class="layui-tab-title">
+								  	<li class="layui-this" lay-url="11">通知</li>
+								    <li lay-url="22">我的私信</li>
+								    <li lay-url="33">我的留言</li>
+								</ul>
+								<div class="layui-tab-content" style="height: 100px;">
+								  <div class="layui-tab-item layui-show">通知消息</div>
+								  <div class="layui-tab-item">私信内容</div>
+								  <div class="layui-tab-item">留言内容</div>
+								</div>
+							</div> 
 						</div>
 					</div>
 				</div>
@@ -51,15 +62,15 @@
 	<!-- <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&amp;id=12&amp;icon=1&amp;num=1"></iframe></div> -->
 	<#include "../../common/commonJs.html">
 	<script type="text/javascript" src="resources/Front/js/blog.js"></script>
-	<script type="text/html" id="barDemo">
-  		<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
-  		<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-  		<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+	<script type="text/javascript">
+		layui.use('element', function(){
+	  		var $ = layui.jquery,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+	  		element.on('tab(docDemoTabBrief)', function(data){
+	  		  console.log(this); //当前Tab标题所在的原始DOM元素
+	  		  console.log(data.index); //得到当前Tab的所在下标
+	  		  console.log(data.elem); //得到当前的Tab大容器
+	  		});
+  		});
 	</script>
-	<script type="text/html" id="checkboxTpl">
-	  <!-- 这里的 checked 的状态只是演示 -->
-	  <input type="checkbox" name="dr" value="{{d.content_id}}" title="锁定" lay-filter="drDemo" {{ d.dr == 1 ? 'checked' : '' }}>
-	</script>
-	<script type="text/javascript" src="resources/Front/js/myartman/articlemanagement.js"></script>
 </body>
 </html>

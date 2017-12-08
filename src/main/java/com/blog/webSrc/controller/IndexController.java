@@ -35,6 +35,7 @@ public class IndexController extends Controller {
 		setAttr("commentlist", commentlist);
 		setAttr("pagelist", pageContent.getList());
 		setAttr("totalPage", pageContent.getTotalPage());
+		setAttr("totalRow", pageContent.getTotalRow());
 		setAttr("curPage", pageNumber);
 		setAttr("pageSize", pageSize);
 		render("index.html");

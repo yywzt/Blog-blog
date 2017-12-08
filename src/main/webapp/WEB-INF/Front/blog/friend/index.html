@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>好友列表</title>
+	<#include "../../common/commonCss.html">
+	<style type="text/css">
+		.panel>.list-group .list-group-item.active {
+			color: #555;
+			font-weight: bold;
+			background-color: transparent;
+			border-color: #DDDDDD;
+		}
+		
+		.bar {
+			background-color: #51D49A;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 5px;
+		}
+	</style>
+</head>
+<body>
+	<!-- head -->
+	<#include "../../common/commonHead.html">
+	
+	<div id="wrap">
+		<!-- 主体 -->
+		<div class="container main">
+
+			<!-- 左侧list面板 -->
+			<#include "../list.html">
+
+			<div class="col-md-10">
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="collapseListGroupHeading1"><i class="fa fa-handshake-o" aria-hidden="true"></i> 好友列表</div>
+					<div>
+						<div class="panel-body">
+							<div class="module-option">
+								<div class="col-lg-6">
+									<div class="input-group">
+									    <input type="text" class="form-control" placeholder="Search for...">
+									    <span class="input-group-addon" id="basic-addon2" style="cursor: pointer;"><i class="fa fa-search" aria-hidden="true"></i></span>
+								    </div><!-- /input-group -->
+								</div><!-- /.col-lg-6 -->
+								<div class="col-lg-6">
+									<div class="btn-group pull-right" data-toggle="buttons-radio">
+	                                	<button type="button" class="btn">All</button>
+	                                    <button type="button" class="btn">Male</button>
+	                                    <button type="button" class="btn active">Female</button>
+	                                </div>
+	                            </div>
+							</div>
+							<div class="module-body">
+								<div class="line">
+									<div class="col-lg-6 bhover">
+										<div class="media">
+											<div class="media-left">
+											    <a href="#">
+											      <img class="media-object img-circle" src="upload\temp\headportrait\user.jpg" alt="..." style="width: 90px; height: 90px;">
+											    </a>
+											</div>
+										  	<div class="media-body">
+										    	<h4 class="media-heading">Media heading</h4>
+										    	<p><span class="label label-info">Default</span></p>
+										    	<div class="media-option btn-group shaded-icon">
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-envelope-o fa-fw"></i>
+                                                    </button>
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </button>
+                                                </div>
+										  	</div>
+										</div>
+									</div>
+									<div class="col-lg-6 bhover">
+										<div class="media">
+											<div class="media-left">
+											    <a href="#">
+											      <img class="media-object img-circle" src="upload\temp\headportrait\user.jpg" alt="..." style="width: 90px; height: 90px;">
+											    </a>
+											</div>
+										  	<div class="media-body">
+										    	<h4 class="media-heading">Media heading</h4>
+										    	<p><span class="label label-info">Default</span></p>
+										    	<div class="media-option btn-group shaded-icon">
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-envelope-o fa-fw"></i>
+                                                    </button>
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </button>
+                                                </div>
+										  	</div>
+										</div>
+									</div>
+								</div>
+								<div class="line">
+									<div class="col-lg-6 bhover">
+										<div class="media">
+											<div class="media-left">
+											    <a href="#">
+											      <img class="media-object img-circle" src="upload\temp\headportrait\user.jpg" alt="..." style="width: 90px; height: 90px;">
+											    </a>
+											</div>
+										  	<div class="media-body">
+										    	<h4 class="media-heading">Media heading</h4>
+										    	<p><span class="label label-info">Default</span></p>
+										    	<div class="media-option btn-group shaded-icon">
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-envelope-o fa-fw"></i>
+                                                    </button>
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </button>
+                                                </div>
+										  	</div>
+										</div>
+									</div>
+									<div class="col-lg-6 bhover">
+										<div class="media">
+											<div class="media-left">
+											    <a href="#">
+											      <img class="media-object img-circle" src="upload\temp\headportrait\user.jpg" alt="..." style="width: 90px; height: 90px;">
+											    </a>
+											</div>
+										  	<div class="media-body">
+										    	<h4 class="media-heading">Media heading</h4>
+										    	<p><span class="label label-info">Default</span></p>
+										    	<div class="media-option btn-group shaded-icon">
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-envelope-o fa-fw"></i>
+                                                    </button>
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </button>
+                                                </div>
+										  	</div>
+										</div>
+									</div>
+								</div>
+								<div class="line">
+									<div class="col-lg-6 bhover">
+										<div class="media">
+											<div class="media-left">
+											    <a href="#">
+											      <img class="media-object img-circle" src="upload\temp\headportrait\user.jpg" alt="..." style="width: 90px; height: 90px;">
+											    </a>
+											</div>
+										  	<div class="media-body">
+										    	<h4 class="media-heading">Media heading</h4>
+										    	<p><span class="label label-info">Default</span></p>
+										    	<div class="media-option btn-group shaded-icon">
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-envelope-o fa-fw"></i>
+                                                    </button>
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </button>
+                                                </div>
+										  	</div>
+										</div>
+									</div>
+									<div class="col-lg-6 bhover">
+										<div class="media">
+											<div class="media-left">
+											    <a href="#">
+											      <img class="media-object img-circle" src="upload\temp\headportrait\user.jpg" alt="..." style="width: 90px; height: 90px;">
+											    </a>
+											</div>
+										  	<div class="media-body">
+										    	<h4 class="media-heading">Media heading</h4>
+										    	<p><span class="label label-info">Default</span></p>
+										    	<div class="media-option btn-group shaded-icon">
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-envelope-o fa-fw"></i>
+                                                    </button>
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </button>
+                                                </div>
+										  	</div>
+										</div>
+									</div>
+								</div>
+								<div class="line">
+									<div class="col-lg-6 bhover">
+										<div class="media">
+											<div class="media-left">
+											    <a href="#">
+											      <img class="media-object img-circle" src="upload\temp\headportrait\user.jpg" alt="..." style="width: 90px; height: 90px;">
+											    </a>
+											</div>
+										  	<div class="media-body">
+										    	<h4 class="media-heading">Media heading</h4>
+										    	<p><span class="label label-info">Default</span></p>
+										    	<div class="media-option btn-group shaded-icon">
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-envelope-o fa-fw"></i>
+                                                    </button>
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </button>
+                                                </div>
+										  	</div>
+										</div>
+									</div>
+									<div class="col-lg-6 bhover">
+										<div class="media">
+											<div class="media-left">
+											    <a href="#">
+											      <img class="media-object img-circle" src="upload\temp\headportrait\user.jpg" alt="..." style="width: 90px; height: 90px;">
+											    </a>
+											</div>
+										  	<div class="media-body">
+										    	<h4 class="media-heading">Media heading</h4>
+										    	<p><span class="label label-info">Default</span></p>
+										    	<div class="media-option btn-group shaded-icon">
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-envelope-o fa-fw"></i>
+                                                    </button>
+                                                    <button class="btn btn-small">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </button>
+                                                </div>
+										  	</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="page" style="text-align: center;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- 底部 --> 
+	<#include "../../common/commonFoot.html"> 
+	<!-- <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&amp;id=12&amp;icon=1&amp;num=1"></iframe></div> -->
+	<#include "../../common/commonJs.html">
+	<script type="text/javascript" src="resources/Front/js/blog.js"></script>
+	<script type="text/javascript">
+		layui.use('laypage', function(){
+			var laypage = layui.laypage;
+			laypage.render({
+				elem: 'page'
+				,count: 700 //数据总数
+				,theme:'#1E9FFF'
+				,jump: function(obj,first){
+					//obj包含了当前分页的所有参数，比如：
+				    console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+				    console.log(obj.limit); //得到每页显示的条数
+				    
+				    //首次不执行
+				    if(!first){
+				      //do something
+				    }
+				}
+			});
+		});
+	</script>
+</body>
+</html>

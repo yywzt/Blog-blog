@@ -6,6 +6,7 @@ import java.util.Map;
 import com.blog.common.config.GlobalConstants;
 import com.blog.common.model.ContentInfo;
 import com.blog.util.StringUtils;
+import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Page;
 
 public class ContentInfoServices {
@@ -63,5 +64,11 @@ public class ContentInfoServices {
 	public List<ContentInfo> findHotRead(String count){
 		String sql = "SELECT content_id,title,read_count,comment_count from content_info ORDER BY ? DESC LIMIT 0,10;";
 		return dao.find(sql,count);
+	}
+	
+	/**修改某个字段的值*/
+	public int updaterow(String id,String filed,String value){
+		String sql = "UPDATE content_info set "+filed+" = ? where content_id = ? ";
+		return Db.update(sql,value,id);
 	}
 }

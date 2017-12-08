@@ -2,6 +2,7 @@ package com.blog.webSrc.controller;
 
 import java.util.List;
 
+import com.blog.common.annotation.NeedLogin;
 import com.blog.common.model.ArticleSort;
 import com.blog.common.model.ContentInfo;
 import com.blog.util.DateUtils;
@@ -10,9 +11,11 @@ import com.blog.webSrc.common.SessionConstants;
 import com.blog.webSrc.services.ArticleSortServices;
 import com.jfinal.core.Controller;
 
+@NeedLogin
 public class MarkdownController extends Controller {
 
 	static ArticleSortServices services = ArticleSortServices.me;
+	
 	public void index(){
 		render("markdown.html");
 	}

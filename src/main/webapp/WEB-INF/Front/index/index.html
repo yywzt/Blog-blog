@@ -147,9 +147,7 @@
 						</#list>
 					</ul>
 					<!--分页-->
-    				<div id="pagediv" class="pagination clearfix">
-
-    				</div>
+    				<div id="page" style="text-align: center;"></div>
 				</div>
 
 			</div>
@@ -183,23 +181,26 @@
 	<#include "../common/commonJs.html">
 	<script src="resources/common/jqPaginator.js"></script>
 	<script type="text/javascript">
-	//分页查询
-	$.jqPaginator('#pagediv', {
-	    totalPages: ${totalPage},
-	    visiblePages: 10,
-	    currentPage: ${curPage},
-	    first: '<li class="first"><a href="javascript:;">首页</a></li>',
-	    prev: '<li class="prev"><a href="javascript:;">上一页</a></li>',
-	    next: '<li class="next"><a href="javascript:;">下一页</a></li>',
-	    page: '<li class="page"><a href="javascript:;" data = "{{page}}">{{page}}</a></li>', 
-	    last: '<li class="last"><a href="javascript:;">末页</a></li>', 
-	    onPageChange: function (num, type) {
-	    	console.log('当前第' + num + '页'+"type"+type);
-	    	if(type==='change'){
-	    		window.location.href="/index?pageNumber="+num;
-	    	}
-	    }
-	});
+		//分页查询
+		layui.use('laypage', function(){
+			var laypage = layui.laypage;
+			laypage.render({
+				elem: 'page'
+				,count: ${totalRow} //数据总数
+				,layout: ['count', 'prev', 'page', 'next', 'limit', 'skip']
+				,theme:'#1E9FFF'
+				,limit:${pageSize}
+				,jump: function(obj,first){
+					//obj包含了当前分页的所有参数，比如：
+				    console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+				    console.log(obj.limit); //得到每页显示的条数
+				    //首次不执行
+				    if(!first){
+				    	window.location.href="/index?pageNumber="+obj.curr+"&pageSize="+obj.limit;
+				    }
+				}
+			});
+		});
 	</script>
 </body>
 </html>

@@ -30,6 +30,8 @@ public class LoginController extends Controller {
 				BlogUser user = services.findbyUserName(username);
 				afterLoginSucess(user);
 				setAttr("success", true);
+				String referer = this.getRequest().getHeader("referer");
+				setAttr("url", referer);
 			}
 		} catch (Exception e) {
 			setAttr("success", false);
@@ -138,4 +140,5 @@ public class LoginController extends Controller {
 		}
 		renderJson();
 	}
+	
 }
