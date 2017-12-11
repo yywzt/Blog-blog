@@ -26,9 +26,6 @@ import com.jfinal.template.Engine;
 import comblog.common.interceptor.AuthInterceptor;
 
 /**
- * 本 demo 仅表达最为粗浅的 jfinal 用法，更为有价值的实用的企业级用法
- * 详见 JFinal 俱乐部: http://jfinal.com/club
- * 
  * API引导式配置
  */
 public class MainConfig extends JFinalConfig {
@@ -44,7 +41,7 @@ public class MainConfig extends JFinalConfig {
 		//设置默认上传文件保存路径 getFile等使用
 		me.setBaseUploadPath("upload/temp/");
 		//设置上传最大限制尺寸
-		//me.setMaxPostSize(1024*1024*10);
+//		me.setMaxPostSize(1024*1024*10);
 		//设置默认下载文件路径 renderFile使用
 		me.setBaseDownloadPath("download");
 		//设置默认视图类型

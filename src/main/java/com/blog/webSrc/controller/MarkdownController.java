@@ -1,5 +1,6 @@
 package com.blog.webSrc.controller;
 
+import java.io.File;
 import java.util.List;
 
 import com.blog.common.annotation.NeedLogin;
@@ -10,6 +11,7 @@ import com.blog.util.StringUtils;
 import com.blog.webSrc.common.SessionConstants;
 import com.blog.webSrc.services.ArticleSortServices;
 import com.jfinal.core.Controller;
+import com.jfinal.upload.UploadFile;
 
 @NeedLogin
 public class MarkdownController extends Controller {
@@ -60,4 +62,25 @@ public class MarkdownController extends Controller {
 		}
 		renderJson();
 	}
+	
+	/**markdown发布文章时添加图片*/
+	public void uploadImg(){
+		try {
+			UploadFile uploadFile = getFile("editormd-image-file", "/articlesImgs/"+DateUtils.getCurDayStr(), 10*1024*1024, "UTF-8");
+			File file = uploadFile.getFile();
+			if(file!=null){
+				String uploadPath = file.getPath();
+				String url = uploadPath.substring(uploadPath.lastIndexOf("upload"));
+				setAttr("success", 1);
+				setAttr("message", "上传成功");
+				setAttr("url",url);
+			}
+		} catch (Exception e) {
+			setAttr("success", 0);
+			setAttr("message", "上传失败");
+			e.printStackTrace();
+		}
+		renderJson();
+	}
+	
 }
