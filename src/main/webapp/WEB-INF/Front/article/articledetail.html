@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>${contentInfo.title}</title>
+<#include "../common/commonCss.html">
+<link rel="stylesheet" href="resources/Front/editor.md-master/css/editormd.css"/>
+</head>
+<body class="home blog columns-4">
+
+	<!-- head -->
+	<#include "../common/commonHead.html">
+
+	<div id="wrap">
+		<!-- 主体 -->
+		<div class="container main">
+
+			<!-- 主体左侧内容 -->
+			<div class="content">
+				<article id="post-864"
+					class="post-864 post type-post status-publish format-standard has-post-thumbnail hentry category-1 tag-34 tag-85">
+					<div class="entry">
+						<div class="entry-head">
+							<h1 class="entry-title">${contentInfo.title}</h1>
+							<div class="entry-info">
+								<a class="nickname" href="/user/1">${contentInfo.user_name}</a><span class="dot">•</span>
+								<span>${contentInfo.create_dt}</span><span class="dot">•</span>
+								<a href="/${contentInfo.type_code}">${contentInfo.type_name}</a><span
+									class="dot">•</span> <span>阅读 ${contentInfo.read_count}</span>
+							</div>
+						</div>
+
+						<!-- 文章内容 -->
+						<div class="entry-content clearfix" id="doc-content"><textarea style="display:none;">${contentInfo.content}</textarea></div>
+
+						<div class="entry-footer">
+							<div class="entry-tag">
+								<a href="/${contentInfo.type_code}" rel="tag">${contentInfo.type_name}</a>
+							</div>
+							<div class="entry-action">
+								<div class="btn-zan">
+									<i class="fa fa-thumbs-up"></i> 赞 <span
+										class="entry-action-num">${contentInfo.laud_count}</span>
+								</div>
+							</div>
+						</div>
+						<h3 class="entry-related-title">评论区</h3>
+					</div>
+				</article>
+			</div>
+
+			<!-- 主体右侧导航栏 -->
+			<aside class="sidebar">
+
+				<div id="profile-2" class="widget widget_profile">
+					<img src="/resources/Front/img/1.jpg" alt="">
+					<div class="avatar-wrap">
+						<a target="_blank" href="" class="avatar-link"><img
+							src="${contentInfo.user_image_url}"
+							class="func-um_user gravatar avatar avatar-120 um-avatar um-avatar-uploaded"
+							width="120" height="120" alt="${contentInfo.user_name}"></a>
+					</div>
+					<div class="profile-info">
+						<p>
+							<span class="author-name">${contentInfo.user_name}</span><span class="author-title">普通用户</span>
+						</p>
+						<p class="author-description">${contentInfo.user_description!""}</p>
+					</div>
+					<div class="profile-info"></div>
+					<div class="profile-posts">
+						<h3 class="widget-title">
+							<span>最近文章</span>
+						</h3>
+						<ul>
+							<li><a href="/article/11096.html"
+								title="《架构即未来》中最常用的15个架构原则">《架构即未来》中最常用的15个架构原则</a></li>
+							<li><a href="/article/10391.html" title="业界当前对DevOps团队尚无定论">业界当前对DevOps团队尚无定论</a></li>
+						</ul>
+					</div>
+					<div></div>
+				</div>
+
+				<div id="views-2" class="widget widget_views">
+					<h3 class="widget-title">热门阅读</h3>
+					<ul class="list-group">
+						<#list contentInfos as list>
+						<li class="list-group-item"><span class="badge">${list.read_count}</span><a
+							href="javascript:void(${list.content_id});" title="${list.title}">${list.title}</a></li>
+						</#list>
+					</ul>
+				</div>
+				<div id="views-4" class="widget widget_views">
+					<h3 class="widget-title">评论排行</h3>
+					<ul class="list-group">
+						<#list commentlist as list>
+						<li class="list-group-item"><span class="badge">${list.comment_count}</span><a
+							href="javascript:void(${list.content_id});" title="${list.title}">${list.title}</a></li>
+						</#list>
+					</ul>
+				</div>
+			</aside>
+		</div>
+
+	</div>
+
+	<!-- 底部 --> 
+	<#include "../common/commonFoot.html"> 
+	<!-- <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&amp;id=12&amp;icon=1&amp;num=1"></iframe></div> -->
+	<#include "../common/commonJs.html">
+	<script src="resources/Front/editor.md-master/editormd.js"></script> 
+	<script src="resources/Front/editor.md-master/lib/marked.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/prettify.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/raphael.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/underscore.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/sequence-diagram.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/flowchart.min.js"></script>
+	<script src="resources/Front/editor.md-master/lib/jquery.flowchart.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	        var wordsView;
+	        wordsView = editormd.markdownToHTML("doc-content", {
+	            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+	            emoji           : true,
+	            taskList        : true,
+	            tex             : true,  // 默认不解析
+	            flowChart       : true,  // 默认不解析
+	            sequenceDiagram : true,  // 默认不解析
+	        });
+	    })
+	</script>
+</body>
+</html>

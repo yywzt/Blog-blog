@@ -14,6 +14,10 @@ public class ContentInfoServices {
 	public static final ContentInfoServices me = new ContentInfoServices();
 	private static final ContentInfo dao = ContentInfo.dao;
 	
+	public ContentInfo findById(Object idValues){
+		return dao.findById(idValues);
+	}
+	
 	/**分页查询所有文章*/
 	public Page<ContentInfo> findAll(int pageNumber,int pageSize,Map<String,Object> paramMap){
 		if(pageNumber<=0)
@@ -60,6 +64,15 @@ public class ContentInfoServices {
 		return dao.paginate(pageNumber, pageSize, select.toString(), where.toString());
 	}
 	
+	/**根据文章id查询详情*/
+	public ContentInfo findDetailsById(String contentid){
+		String sql = "SELECT users.user_name,users.user_image_url,users.user_description,content_info.content_id,content_info.user_id,"
+				+ "	content_info.type_id,content_info.title,content_info.content,content_info.create_dt,content_info.read_count,"
+				+ " content_info.laud_count,content_info.comment_count,content_info.dr,art.type_code,art.type_name"
+				+ " FROM content_info content_info INNER JOIN blog_user users ON content_info.user_id=users.user_id"
+				+ "	LEFT JOIN article_sort art ON content_info.type_id=art.type_id where content_id = " + contentid;
+		return dao.findFirst(sql);
+	}
 	/**热门阅读(阅读量前十)*/
 	public List<ContentInfo> findHotRead(String count){
 		String sql = "SELECT content_id,title,read_count,comment_count from content_info ORDER BY ? DESC LIMIT 0,10;";

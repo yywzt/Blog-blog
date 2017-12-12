@@ -24,7 +24,7 @@ $(function(){
 	    }else{
 	        $("#gotop")[0].setAttribute("style","display:none");
 	    }
-	    if($(document).scrollTop() < 500){
+	    /*if($(document).scrollTop() < 500){
 	        $(".sidebar").removeClass("fixed abs");
 	    }
 	    if($(document).scrollTop() >= 600 ){
@@ -34,7 +34,7 @@ $(function(){
 	    if($(document).scrollTop() >= $(document).height() -  $(window).height()-$('.footer').height() - 50){
 	        $(".sidebar").removeClass("fixed");
 	        $(".sidebar").addClass('abs');
-	    }
+	    }*/
 	});
 	
 	//返回顶部

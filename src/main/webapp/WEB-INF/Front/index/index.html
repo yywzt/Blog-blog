@@ -101,7 +101,7 @@
 						<#list pagelist as list>
 							<li class="item">
 								<div class="item-img">
-									<a href="/article/${list.content_id}.html" title=${list.title}
+									<a href="/article?content=${list.content_id}" title=${list.title}
 										target="_blank"> <img width="480" height="300"
 										src="resources/Front/img/3.jpg"
 										class="attachment-post-thumbnail size-post-thumbnail j-lazy wp-post-image"
@@ -112,7 +112,7 @@
 								</div>
 								<div class="item-content">
 									<h2 class="item-title">
-										<a href="${list.content_id}" title="${list.title}"
+										<a href="/article?content=${list.content_id}" title="${list.title}"
 											target="_blank">${list.title}</a>
 									</h2>
 									<div class="item-excerpt">

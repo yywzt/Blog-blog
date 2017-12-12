@@ -1,3 +1,10 @@
+body{
+	background: url(../img/bg-yellow.png) repeat!important;
+}
+header{
+	background: url(../img/title-yellow.png) no-repeat center -201px;
+    color: #fff;
+}
 html, body, #wrap { height:100%; }
 .nav-tabs > li{
 	float: right;

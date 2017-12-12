@@ -1,5 +1,6 @@
 package com.blog.common.config;
 
+import com.blog.webSrc.controller.ArticleController;
 import com.blog.webSrc.controller.CommunityController;
 import com.blog.webSrc.controller.IndexController;
 import com.blog.webSrc.controller.LoginController;
@@ -16,6 +17,8 @@ public class FrontRoutes extends Routes {
 		add("/index", IndexController.class);
 		//社区
 		add("/community", CommunityController.class);
+		//文章列表
+		add("/article", ArticleController.class);
 		//我的博客
 		add(new blogRoutes());
 	}
