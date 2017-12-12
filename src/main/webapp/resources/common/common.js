@@ -48,7 +48,7 @@ $(function(){
 
 
     var urlstr = location.href;  
-
+	
     $("#menu-justnews-menu>li").each(function () {
         if ((urlstr + '/').indexOf($(this).children('a').attr('href')) > -1&&$(this).children('a').attr('href')!='') {
 			$(this).addClass('active');
