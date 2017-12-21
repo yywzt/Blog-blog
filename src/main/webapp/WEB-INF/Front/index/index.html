@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>首页</title>
 	<#include "../common/commonCss.html">
 </head>
@@ -72,14 +74,14 @@
 					<div class="sec-panel-head">
 						<h2>
 							专题介绍 <small>专题模块标题旁边的描述文字</small><a href="/special"
-								target="_blank" class="more">全部专题</a>
+								target="_self" class="more">全部专题</a>
 						</h2>
 					</div>
 					<div class="sec-panel-body">
 						<ul class="list topic-list">
 							<#list articleSorts as list>
 								<li class="topic"><a class="topic-wrap"
-									href="/article-java-${list.type_id}.html" target="_blank">
+									href="/article-java-${list.type_id}.html" target="_self">
 										<div class="cover-container">
 											<img src="resources/Front/img/top.jpg" alt="${list.type_name}" />
 										</div><span>${list.type_name}</span>
@@ -100,9 +102,9 @@
 					<ul class="article-list tab-list active">
 						<#list pagelist as list>
 							<li class="item">
-								<div class="item-img">
+								<div class="item-img img-rounded">
 									<a href="/article?content=${list.content_id}" title=${list.title}
-										target="_blank"> <img width="480" height="300"
+										target="_self"> <img width="480" height="300"
 										src="resources/Front/img/3.jpg"
 										class="attachment-post-thumbnail size-post-thumbnail j-lazy wp-post-image"
 										alt=${list.title}
@@ -113,7 +115,7 @@
 								<div class="item-content">
 									<h2 class="item-title">
 										<a href="/article?content=${list.content_id}" title="${list.title}"
-											target="_blank">${list.title}</a>
+											target="_self">${list.title}</a>
 									</h2>
 									<div class="item-excerpt">
 										<p>背景：昨天新够了一台2G内存的主机，所以我折腾折腾多应用 所以整合了多个节点；
@@ -125,11 +127,11 @@
 									</div>
 									<div class="item-meta">
 										<div class="item-meta-li author">
-											<a data-user="${list.user_id}" target="_blank" href="#" class="avatar">
+											<a data-user="${list.user_id}" target="_self" href="#" class="avatar">
 												<img src="${list.user_image_url}"
 												class="func-um_user gravatar avatar avatar-60 um-avatar um-avatar-uploaded"
 												width="60" height="60" alt="yw">
-											</a> <a class="nickname" href="#" target="_blank">${list.user_name}</a>
+											</a> <a class="nickname" href="#" target="_self">${list.user_name}</a>
 										</div>
 										<span class="item-meta-li date">${list.create_dt}</span> <span
 											class="item-meta-li views" title="阅读数"><i
@@ -137,7 +139,7 @@
 											class="item-meta-li likes" title="点赞数"><i
 											class="fa fa-thumbs-up"></i><span class="data">${list.laud_count}</span></span> <a
 											class="item-meta-li comments"
-											href="/article/4205.html#comments" target="_blank" title="评论数">
+											href="/article/4205.html#comments" target="_self" title="评论数">
 											<i class="fa fa-comment"></i> <span class="data">评论: ${list.comment_count}</span>
 										</a> <span class="item-meta-li hearts" title="喜欢数"><i
 											class="fa fa-heart"></i><span class="data">${list.comment_count}</span></span>
@@ -158,7 +160,7 @@
 					<h3 class="widget-title">热门阅读</h3>
 					<ul class="list-group">
 						<#list contentInfos as list>
-							<li class="list-group-item"><span class="badge">${list.read_count}</span><a href="javascript:void(${list.content_id});" title="${list.title}">${list.title}</a></li>
+							<li class="list-group-item"><span class="badge">${list.read_count}</span><a href="/article?content=${list.content_id}" title="${list.title}">${list.title}</a></li>
 						</#list>
 					</ul>
 				</div>
@@ -166,7 +168,7 @@
 					<h3 class="widget-title">评论排行</h3>
 					<ul class="list-group">
 						<#list commentlist as list>
-							<li class="list-group-item"><span class="badge">${list.comment_count}</span><a href="javascript:void(${list.content_id});" title="${list.title}">${list.title}</a></li>
+							<li class="list-group-item"><span class="badge">${list.comment_count}</span><a href="/article?content=${list.content_id}" title="${list.title}">${list.title}</a></li>
 						</#list>
 					</ul>
 				</div>

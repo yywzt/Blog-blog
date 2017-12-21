@@ -46,6 +46,7 @@ public class LoginController extends Controller {
 		//清空session
 		setSessionAttr("user_id", null);
 		setSessionAttr("user_name", null);
+		setSessionAttr(SessionConstants.USER_IMAGE_URL,null);
 		redirect("/index");
 	}
 	
