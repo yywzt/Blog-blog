@@ -5,7 +5,9 @@ import com.alibaba.druid.filter.stat.StatFilter;
 import com.alibaba.druid.wall.WallFilter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.blog.common.interceptor.AuthInterceptor;
 import com.blog.common.model._MappingKit;
+import com.blog.util.GlobalConstants;
 import com.blog.util.StringUtils;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
@@ -22,8 +24,6 @@ import com.jfinal.plugin.c3p0.C3p0Plugin;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
-
-import comblog.common.interceptor.AuthInterceptor;
 
 /**
  * API引导式配置

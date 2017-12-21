@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.blog.common.config.GlobalConstants;
 import com.blog.common.model.ArticleSort;
 import com.blog.common.model.ContentInfo;
+import com.blog.util.GlobalConstants;
 import com.blog.webSrc.services.ArticleSortServices;
 import com.blog.webSrc.services.ContentInfoServices;
 import com.jfinal.core.Controller;

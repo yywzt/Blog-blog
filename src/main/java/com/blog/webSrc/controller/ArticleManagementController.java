@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.blog.common.annotation.NeedLogin;
-import com.blog.common.config.GlobalConstants;
 import com.blog.common.model.ContentInfo;
+import com.blog.util.GlobalConstants;
 import com.blog.webSrc.common.SessionConstants;
 import com.blog.webSrc.services.ContentInfoServices;
 import com.jfinal.core.Controller;

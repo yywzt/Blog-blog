@@ -1,4 +1,4 @@
-package comblog.common.interceptor;
+package com.blog.common.interceptor;
 
 import java.lang.reflect.Method;
 
