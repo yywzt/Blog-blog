@@ -17,7 +17,11 @@ public class LoginController extends Controller {
 
 	static BlogUserServices services = BlogUserServices.me;
 	public void login(){
-		render("login.html");
+		if(StringUtils.isNotEmptyObj(getSessionAttr("user_id"))){
+			redirect("/index");
+		}else{
+			render("login.html");
+		}
 	}
 	
 	/**登录*/
@@ -38,7 +42,6 @@ public class LoginController extends Controller {
 			setAttr("errmsg", "登录出错!");
 			e.printStackTrace();
 		}
-//		redirect("/index");
 		renderJson();
 	}
 	
