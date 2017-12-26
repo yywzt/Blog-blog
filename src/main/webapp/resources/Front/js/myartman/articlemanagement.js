@@ -13,16 +13,16 @@ layui.use('table', function(){
 	    page: true , //开启分页 
 	    cols: [[ //表头
 	    	{checkbox: true,width:60,fixed: 'left'}
-	      ,{field: 'content_id', title: 'ID',fixed: 'true',align:'center', width:60, sort: true, /* fixed: 'left' */}
-	      ,{field: 'type_name', title: '类型', width:90,}
-	      ,{field: 'title', title: '标题', width:120, sort: true,edit:'text',}
-	      ,{field: 'content', title: '内容', width:150,} 
+	      ,{field: 'content_id', title: 'ID',fixed: 'true',align:'center', width:60, sort: true}
+	      ,{field: 'type_name', title: '类型', width:90}
+	      ,{field: 'title', title: '标题', width:120, sort: true,edit:'text'}
+	      ,{field: 'content', title: '内容', width:150} 
 	      ,{field: 'create_dt', title: '创建时间',align:'center', width: 160,sort: true}
 	      ,{field: 'read_count', title: '阅读量', align:'center',width: 90, sort: true}
 	      ,{field: 'laud_count', title: '点赞数',align:'center', width: 90, sort: true}
 	      ,{field: 'comment_count', title: '评论数', align:'center',width: 90,sort: true}
-	      ,{field: 'dr', title: '是否有效',align:'center', width: 120,fixed: 'right',templet:'#checkboxTpl',unresize: true,}
-	      ,{fixed: 'right', title:'操作', width:150, align:'center', toolbar: '#barDemo',} //这里的toolbar值是模板元素的选择器
+	      ,{field: 'dr', title: '是否有效',align:'center', width: 120,fixed: 'right',templet:'#checkboxTpl',unresize: true}
+	      ,{fixed: 'right', title:'操作', width:150, align:'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
 	    ]] ,
 	    done: function(res, curr, count){
 		    //如果是异步请求数据方式，res即为你接口返回的信息。
@@ -34,7 +34,7 @@ layui.use('table', function(){
 		    
 		    //得到数据总量
 		    //console.log(count);
-		},
+		}
 	  });
 	table.on('edit(test)', function(obj){ //注：edit是固定事件名，test是table原始容器的属性 lay-filter="对应的值"
 		//console.log(obj.value); //得到修改后的值
