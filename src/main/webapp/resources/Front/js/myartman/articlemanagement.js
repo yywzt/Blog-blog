@@ -16,7 +16,7 @@ layui.use('table', function(){
 	      ,{field: 'content_id', title: 'ID',fixed: 'true',align:'center', width:60, sort: true}
 	      ,{field: 'type_name', title: '类型', width:90}
 	      ,{field: 'title', title: '标题', width:120, sort: true,edit:'text'}
-	      ,{field: 'content', title: '内容', width:150} 
+//	      ,{field: 'content', title: '内容', width:150} 
 	      ,{field: 'create_dt', title: '创建时间',align:'center', width: 160,sort: true}
 	      ,{field: 'read_count', title: '阅读量', align:'center',width: 90, sort: true}
 	      ,{field: 'laud_count', title: '点赞数',align:'center', width: 90, sort: true}
