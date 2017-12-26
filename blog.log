@@ -8009,3 +8009,6 @@ Caused by: java.io.FileNotFoundException: Template "/WEB-INF/Front/index.html" n
 
 2017-12-21 11:55:11
 [WARN]-[Thread: qtp936580213-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2017-12-26 11:34:31
+[WARN]-[Thread: qtp936580213-23]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /web
